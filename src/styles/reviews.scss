@@ -70,3 +70,49 @@
     width: 3%;
   }
 }
+
+.reviews-container {
+  position: relative;
+  width: 920px;
+  height: 402px;
+  overflow: hidden;
+}
+
+.reviews {
+  position: absolute;
+  display: flex;
+  gap: 64px;
+
+  width: 920px;
+  animation: 10s linear 1s infinite running carousel;
+}
+
+@keyframes carousel {
+  0% {
+    right: 0px;
+  }
+
+  100% {
+    right: 1968px
+  }
+}
+
+.reviews__set {
+  display: flex;
+  gap: 64px;
+}
+
+.reviews-container {
+  margin-top: 64px;
+}
+
+.review {
+  border: 1px solid #000;
+  line-height: 1.5;
+  width: 214px;
+  padding: 48px 32px 24px 16px;
+
+  &__reviewer-name {
+    margin-top: 16px;
+  }
+}
