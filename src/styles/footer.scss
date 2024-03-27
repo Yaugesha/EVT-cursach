@@ -1,0 +1,53 @@
+footer {
+  margin: auto;
+  padding: 48px 32px 32px;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+
+  &__about {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__slogan {
+    line-height: 1.5rem;
+  }
+
+  &__socials {
+    display: flex;
+    gap: 24px;
+
+    img {
+      cursor: pointer;
+    }
+  }
+
+  &__navigation {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+
+    h3 {
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    li:not(:first-of-type) {
+      margin-top: 12px;
+    }
+  }
+
+  &__copirate {
+    margin-top: 96px;
+    border-top: 1px solid #000;
+    padding-top: 32px;
+
+    font-size: 12px;
+    line-height: 1.25rem;
+  }
+}
