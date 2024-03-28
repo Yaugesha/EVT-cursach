@@ -8,6 +8,7 @@
 .accordion {
   width: 1340px;
   border: solid 2px #000;
+  border-radius: 24px;
 }
 
 .accordion__header {
@@ -20,6 +21,8 @@
 }
 
 .tab {
+  font-size: 18px;
+  line-height: 160%;
   padding: 24px;
 
   &:not(&:last-of-type) {

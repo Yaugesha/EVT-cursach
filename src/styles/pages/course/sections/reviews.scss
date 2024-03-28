@@ -73,7 +73,7 @@
 
 .reviews-container {
   position: relative;
-  width: 920px;
+  width: 1248px;
   height: 402px;
   overflow: hidden;
 }
@@ -83,8 +83,8 @@
   display: flex;
   gap: 64px;
 
-  width: 920px;
-  animation: 10s linear 1s infinite running carousel;
+  width: 1248px;
+  animation: 10ss linear 1s infinite running carousel;
 }
 
 @keyframes carousel {
@@ -93,7 +93,7 @@
   }
 
   100% {
-    right: 1968px
+    right: 2952px;
   }
 }
 
@@ -108,6 +108,7 @@
 
 .review {
   border: 1px solid #000;
+  border-radius: 16px;
   line-height: 1.5;
   width: 214px;
   padding: 48px 32px 24px 16px;
