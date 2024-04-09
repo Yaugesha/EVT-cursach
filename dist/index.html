@@ -6,20 +6,73 @@
     <title>Code-trainer</title>
   </head>
   <body>
-    <header>
+    <header class="site-header">
       <div class="burger-menu-icon">
         <span></span>
         <span></span>
         <span></span>
       </div>
       <nav>
-        <ul class="navigation">
-          <li class="navigation__tab_active"><a href="">Link 1</a></li>
-          <li class="navigation__tab"><a href="">Link 2</a></li>
-          <li class="navigation__tab"><a href="">Link 3</a></li>
-          <li class="navigation__tab"><a href="">Link 4</a></li>
+        <ul class="site-navigation">
+          <li class="navigation__tab_active"><a href="#about">About</a></li>
+          <li class="navigation__tab"><a href="#exercises">Exercises</a></li>
+          <li class="navigation__tab"><a href="#features">Features</a></li>
+          <li class="navigation__tab"><a href="#reviews">Reviews</a></li>
         </ul>
       </nav>
+    </header>
+    <header class="page-header">
+      <div class="page-header__container">
+        <div class="page-header__content">
+          <div class="page-header__info">
+            <img src="../src/public/svg/ic-js-logo.svg" alt="JS">
+            <div class="course-info">
+              <span class="course-info__name">JavaScript</span>
+              <div class="course-info__stats">
+                <img src="../src/public/svg/ic-students.svg" alt="students">
+                <span class="course-info__students">51,407 students</span>
+              </div>
+            </div>
+          </div>
+          <nav class="page-header__navigation">
+            <ul class="page-header__navigation-list">
+              <li class="page-header__navigation-tab page-header__navigation-tab_active">
+                <a href="#about">
+                  <img src="" alt="">
+                  <span>About</span>
+                </a>
+              </li>
+              <li class="page-header__navigation-tab">
+                <a href="#exercises">
+                  <img src="" alt="">
+                  <span>Exercises</span>
+                </a>
+              </li>
+              <li class="page-header__navigation-tab">
+                <a href="#features">
+                  <img src="" alt="">
+                  <span>Features</span>
+                </a>
+              </li>
+              <li class="page-header__navigation-tab">
+                <a href="#reviews">
+                  <img src="" alt="">
+                  <span>Reviews</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="page-header__contributors">
+          <a href="https://github.com" target="_blank">
+            <div class="contibutors__faces"></div>
+            <div class="contributors__stats">
+              <span class="contributors__contributors">255 contibutors</span>
+              <span class="contributors__mentors">1313 mentors</span>
+            </div>
+          </a>
+        </div>
+      </div>
     </header>
     <main>
       <section id="about">
@@ -178,7 +231,9 @@
       </section>
       <section id="features">
         <div class="features">
-          <div class="logo">JS</div>
+          <div class="logo">
+            <img src="../src/public/svg/ic-js-logo-blur.svg" alt="JS">
+          </div>
           <div class="feature" id="feature-1">
             <img
               src="../src/public/svg/features/ic-cross-platform.svg"

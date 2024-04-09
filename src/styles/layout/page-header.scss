@@ -1,0 +1,84 @@
+.page-header {
+  margin: 0 auto;
+  width: 1440px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    max-width: 1440px;
+  }
+
+  &__content {
+    flex-grow: 1;
+    width: 100%;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    img {
+      width: 54px;
+    }
+
+    .course-info {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+
+      &__name {
+        font-size: 40px;
+        font-weight: 700;
+      }
+
+      &__stats {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        img {
+          width: 21px;
+        }
+      }
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    gap: 24px;
+    margin-top: 8px;
+
+    &-list {
+      display: flex;
+    }
+
+    &-tab a {
+      display: flex;
+      align-items: center;
+      padding: 16px 8px;
+
+      span {
+        line-height: 140%;
+        font-weight: 600;
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__contributors {
+    .contributors__faces {
+    }
+    .contributors__stats {
+      display: flex;
+      flex-direction: column;
+      width: max-content;
+    }
+    .contributors__contributors {
+      font-weight: 600;
+    }
+    .contributors__mentors {
+      font-weight: 500;
+    }
+  }
+}

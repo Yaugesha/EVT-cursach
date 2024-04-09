@@ -9,14 +9,6 @@ section {
   height: 128px;
   width: 128px;
 
-  display: flex;
-  flex-flow: row-reverse;
-  align-items: end;
-
-  font-size: 92px;
-  background: #f7df1e;
-
-  filter: drop-shadow(0 2px 16px rgba(0, 0, 0, 0.35), 0.3);
   margin-left: -64px;
   margin-top: -64px;
 }

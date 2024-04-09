@@ -84,7 +84,11 @@
   gap: 64px;
 
   width: 1248px;
-  animation: 10ss linear 1s infinite running carousel;
+  animation: 25s linear 1s infinite running carousel;
+
+  &:hover {
+    animation-play-state: paused;
+  }
 }
 
 @keyframes carousel {
@@ -93,7 +97,7 @@
   }
 
   100% {
-    right: 2952px;
+    right: 2624px;
   }
 }
 
