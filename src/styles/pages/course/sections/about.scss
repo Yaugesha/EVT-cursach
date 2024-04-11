@@ -1,9 +1,12 @@
 #about {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  max-width: 1392px;
+  margin: 0 auto;
+
   border-bottom-width: 3px;
   border-color: var(--borderColor7);
-  padding-bottom: 64px;
+  padding: 20px 24px 64px;
 }
 
 .content {
@@ -64,6 +67,7 @@ h2 {
   a {
     position: relative;
     display: inline-block;
+
     &::after {
       content: "";
       position: absolute;

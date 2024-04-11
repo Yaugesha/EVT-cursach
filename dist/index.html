@@ -7,6 +7,9 @@
   </head>
   <body>
     <header class="site-header">
+      <a class="header-logo" href="">
+        <img sclass="logo__image" src="" alt="logo">
+      </a>
       <div class="burger-menu-icon">
         <span></span>
         <span></span>
@@ -37,35 +40,35 @@
           <nav class="page-header__navigation">
             <ul class="page-header__navigation-list">
               <li class="page-header__navigation-tab page-header__navigation-tab_active">
-                <a href="#about">
-                  <img src="" alt="">
-                  <span>About</span>
+                <a class="page-header__navigation-tab-content" href="#about">
+                  About
                 </a>
               </li>
               <li class="page-header__navigation-tab">
-                <a href="#exercises">
-                  <img src="" alt="">
-                  <span>Exercises</span>
+                <a class="page-header__navigation-tab-content" href="#exercises">
+                  Exercises
                 </a>
               </li>
               <li class="page-header__navigation-tab">
-                <a href="#features">
-                  <img src="" alt="">
-                  <span>Features</span>
+                <a class="page-header__navigation-tab-content" href="#features">
+                  Features
                 </a>
               </li>
               <li class="page-header__navigation-tab">
-                <a href="#reviews">
-                  <img src="" alt="">
-                  <span>Reviews</span>
+                <a class="page-header__navigation-tab-content" href="#reviews">
+                  Reviews
                 </a>
               </li>
             </ul>
           </nav>
         </div>
         <div class="page-header__contributors">
-          <a href="https://github.com" target="_blank">
-            <div class="contibutors__faces"></div>
+          <a class="contributors" href="https://github.com" target="_blank">
+            <div class="contributors__faces">
+              <div class="contributors__face contributors__face_first"></div>
+              <div class="contributors__face contributors__face_second"></div>
+              <div class="contributors__face contributors__face_third"></div>
+            </div>
             <div class="contributors__stats">
               <span class="contributors__contributors">255 contibutors</span>
               <span class="contributors__mentors">1313 mentors</span>
@@ -157,6 +160,14 @@
         </pre>
       </section>
       <section id="exercises">
+        <div class="about-exercises">
+          <h2 class="about-exercises__heading">
+            118 coding exercises for JavaScript course
+          </h2>
+          <p class="about-exercises__description">
+            Get better at programming through fun, rewarding coding exercises that test your understanding of concepts with OUR COMPANY.
+          </p>
+        </div>
         <div class="accordion">
           <div class="accordion__header">
             <div class="accordion__description">
@@ -168,7 +179,7 @@
             </span>
           </div>
           <div class="tab">
-            <input type="checkbox" id="tab-1" />
+            <input type="radio" id="tab-1" name="tab" />
             <label class="tab__label" for="tab-1">About</label>
             <div class="tab__content">
               JavaScript is a programming language that allows web pages to be
@@ -180,7 +191,7 @@
             </div>
           </div>
           <div class="tab">
-            <input type="checkbox" id="tab-2" />
+            <input type="radio" id="tab-2" name="tab" />
             <label class="tab__label" for="tab-2">About</label>
             <div class="tab__content">
               JavaScript is a programming language that allows web pages to be
@@ -192,7 +203,7 @@
             </div>
           </div>
           <div class="tab">
-            <input type="checkbox" id="tab-3" />
+            <input type="radio" id="tab-3" name="tab" />
             <label class="tab__label" for="tab-3">About</label>
             <div class="tab__content">
               JavaScript is a programming language that allows web pages to be
@@ -204,7 +215,7 @@
             </div>
           </div>
           <div class="tab">
-            <input type="checkbox" id="tab-4" />
+            <input type="radio" id="tab-4" name="tab" />
             <label class="tab__label" for="tab-4">About</label>
             <div class="tab__content">
               JavaScript is a programming language that allows web pages to be
@@ -216,7 +227,7 @@
             </div>
           </div>
           <div class="tab">
-            <input type="checkbox" id="tab-5" />
+            <input type="radio" id="tab-5" name="tab" />
             <label class="tab__label" for="tab-5">About</label>
             <div class="tab__content">
               JavaScript is a programming language that allows web pages to be
@@ -230,6 +241,9 @@
         </div>
       </section>
       <section id="features">
+          <h2>
+            Key features of JavaScript
+          </h2>
         <div class="features">
           <div class="logo">
             <img src="../src/public/svg/ic-js-logo-blur.svg" alt="JS">

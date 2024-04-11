@@ -1,12 +1,19 @@
-header {
+.site-header {
+  display: flex;
+  justify-content: space-between;
   padding: 20px 24px;
-}
-header {
+
+  .header-logo {
+    &__image {
+    }
+  }
+
   .site-navigation {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 32px;
   }
 
   .burger-menu-icon {
