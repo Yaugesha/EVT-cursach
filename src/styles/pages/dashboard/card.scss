@@ -1,0 +1,111 @@
+@import "../../utilities/mixins.scss";
+
+.dashboard-card {
+  @include border(1px, #000, 8px);
+
+  &__head {
+    @include flex($content: space-between);
+    @include font($weight: 600, $line-h: 56px);
+    padding: 0px 24px;
+    border-bottom: 1px solid #000;
+  }
+
+  &__body {
+    @include flex($flow: column);
+    padding: 16px;
+  }
+
+  &__footer {
+    @include flex();
+    border-top: 1px solid #000;
+    padding: 16px;
+  }
+}
+
+.stats {
+  @include flex(center, space-around);
+
+  .stat {
+    @include flex($items: center, $flow: column);
+
+    &__label {
+      @include flex(center);
+      gap: 8px;
+      @include font(14px, 300);
+    }
+
+    &__data {
+      @include font(20px, 600, 28px);
+    }
+  }
+}
+
+.tasks-table {
+  width: 100%;
+}
+
+.task {
+  @include flex($content: space-between);
+  height: 50px;
+  padding: 12px 8px;
+
+  &__name {
+    word-break: break-word;
+    font-size: 14px;
+    color: cornflowerblue;
+  }
+
+  &__type {
+    @include border(1px, rgb(114, 46, 209), 4px);
+    @include font(14px, 300, 1.5);
+    padding: 0px 8px;
+    background-color: rgba(114, 46, 209, 0.063);
+    color: rgb(114, 46, 209);
+  }
+
+  &__deadline {
+    // @include flex($content: end, $flow: column);
+  }
+
+  .deadline {
+    @include flex($content: end, $flow: column);
+    gap: 8px;
+
+    &__head {
+      @include flex(center);
+      gap: 4px;
+      @include font(14px, 300, 1.5);
+    }
+
+    &__data {
+      @include font(14px, 400, 1.5);
+    }
+  }
+}
+
+.cross-check {
+  @include flex(center, center, column);
+  gap: 16px;
+  @include font(14px);
+
+  &__data_empty {
+    @include flex($flow: column);
+    gap: 8px;
+  }
+}
+
+.note {
+  @include flex(top);
+  gap: 4px;
+  @include font(14px, 400, 1.15);
+  padding: 8px 4px;
+}
+
+.repository {
+  @include flex($flow: column);
+  gap: 10px;
+
+  //   &__link {
+  //     @include flex();
+  //   }
+}

@@ -1,4 +1,4 @@
-@mixin flex($flow: row, $items: center, $content: start) {
+@mixin flex($items: center, $content: start, $flow: row) {
   display: flex;
   flex-flow: $flow;
   align-items: $items;
@@ -32,7 +32,7 @@
   border-radius: $radius;
 }
 
-@mixin font($size, $weight: 400, $line-h: 1) {
+@mixin font($size: 1rem, $weight: 400, $line-h: 1) {
   font-size: $size;
   font-weight: $weight;
   line-height: $line-h;

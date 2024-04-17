@@ -25,4 +25,9 @@ module.exports = {
       },
     ],
   },
+  devServer: {
+    static: "./dist/dashboard",
+    port: 8000,
+    open: true,
+  },
 };
