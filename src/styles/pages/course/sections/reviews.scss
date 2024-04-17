@@ -1,7 +1,7 @@
+@import "../../../utilities/mixins.scss";
+
 #reviews {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  @include flex($items: center, $flow: column);
   max-width: 1392px;
   padding: 20px 24px;
 
@@ -9,23 +9,17 @@
 }
 
 .raiting {
-  display: flex;
-  justify-content: center;
+  @include flex($content: center);
   margin-bottom: 16px;
 
   &__number {
-    font-size: 64px;
-    font-weight: 700;
+    @include font($size: 64px, $weight: 700);
   }
 
   &__info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: start;
+    @include flex($items: start, $flow: column, $content: space-between);
 
-    margin-top: 8px;
-    margin-bottom: 8px;
+    @include margin-y(8px);
     margin-left: 24px;
   }
 }
@@ -44,11 +38,9 @@
 }
 
 .stat__scale {
-  border: 0.0625rem solid #000;
-  border-radius: 5rem;
+  @include border(0.0625rem, #000, 5rem);
   background-color: #fff;
-  width: 338px;
-  height: 0.5rem;
+  @include size(338px, 0.5rem);
 }
 
 .stat__scale-value {
@@ -75,8 +67,7 @@
 
 .reviews-container {
   position: relative;
-  width: 100%;
-  height: 402px;
+  @include size(100%, 402px);
   overflow: hidden;
 
   margin-top: 64px;
@@ -111,8 +102,7 @@
 }
 
 .review {
-  border: 1px solid #000;
-  border-radius: 16px;
+  @include border(1px, #000, 16px);
   line-height: 1.5;
   width: 214px;
   padding: 48px 32px 24px 16px;

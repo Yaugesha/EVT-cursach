@@ -1,3 +1,5 @@
+@import "../../../utilities/mixins.scss";
+
 #exercises {
   margin: auto;
   max-width: 1392px;
@@ -8,9 +10,7 @@
 }
 
 .about-exercises {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex($flow: column, $items: center);
   gap: 4px;
 
   &__description {
@@ -21,13 +21,10 @@
 
 .accordion {
   max-width: 1392px;
-  border: solid 2px #000;
-  border-radius: 24px;
+  @include border(2px, #000, 24px);
 
   &__header {
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
+    @include flex($items: end, $content: space-between);
 
     padding: 32px 24px 24px;
     border-bottom: solid 2px #000;
@@ -35,8 +32,7 @@
 }
 
 .accordion .tab {
-  font-size: 18px;
-  line-height: 160%;
+  @include font($size: 18px, $line-h: 160%);
   padding: 24px;
 
   &:not(&:last-of-type) {
@@ -63,9 +59,7 @@
   }
 
   &__label {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flex($items: center, $content: space-between);
 
     height: 48px;
     cursor: pointer;
@@ -74,8 +68,7 @@
       display: block;
       content: " ";
       background-image: url("/src/public/svg/ic-arrow-down.svg");
-      height: 16px;
-      width: 16px;
+      @include size(16px);
     }
   }
 

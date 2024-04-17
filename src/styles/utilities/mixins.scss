@@ -1,0 +1,44 @@
+@mixin flex($flow: row, $items: center, $content: start) {
+  display: flex;
+  flex-flow: $flow;
+  align-items: $items;
+  justify-content: $content;
+}
+
+@mixin position($pos, $t: null, $r: null, $b: null, $l: null) {
+  position: $pos;
+  top: $t;
+  left: $l;
+  bottom: $b;
+  right: $r;
+}
+
+@mixin size($w, $h: $w) {
+  width: $w;
+  height: $h;
+}
+
+@mixin border($b-w, $color, $radius) {
+  border: $b-w solid $color;
+  border-radius: $radius;
+}
+
+@mixin border-b($b-w, $color) {
+  border-bottom: $b-w solid $color;
+}
+
+@mixin border-only-radius($radius) {
+  border: none;
+  border-radius: $radius;
+}
+
+@mixin font($size, $weight: 400, $line-h: 1) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-h;
+}
+
+@mixin margin-y($top, $bottom: $top) {
+  margin-top: $top;
+  margin-bottom: $bottom;
+}

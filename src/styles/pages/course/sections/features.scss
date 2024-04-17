@@ -1,3 +1,5 @@
+@import "../../../utilities/mixins.scss";
+
 section {
   position: relative;
   padding-bottom: 64px;
@@ -9,12 +11,8 @@ h2 {
 }
 
 .logo {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  height: 128px;
-  width: 128px;
-
+  @include position($pos: absolute, $t: 50%, $l: 50%);
+  @include size(128px);
   margin-left: -64px;
   margin-top: -64px;
 }
@@ -28,13 +26,10 @@ h2 {
 }
 
 .feature {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  // position: absolute;
+  @include flex($flow: column, $items: center);
 
-  font-size: 18px;
-  line-height: 160%;
+  @include font($size: 18px, $line-h: 160%);
   text-align: center;
   width: 340px;
 
@@ -48,26 +43,21 @@ h2 {
   }
 
   &:nth-of-type(2) {
-    left: 10%;
-    top: 40px;
+    @include position($pos: absolute, $t: 10%, $l: 40px);
   }
   &:nth-of-type(3) {
-    left: 45%;
+    @include position($pos: absolute, $l: 45%);
   }
   &:nth-of-type(4) {
-    left: 0;
-    top: 260px;
+    @include position($pos: absolute, $t: 260px, $l: 0);
   }
   &:nth-of-type(5) {
-    left: 20%;
-    top: 480px;
+    @include position($pos: absolute, $t: 480px, $l: 20%);
   }
   &:nth-of-type(6) {
-    right: 10%;
-    top: 420px;
+    @include position($pos: absolute, $t: 420px, $r: 10%);
   }
   &:nth-of-type(7) {
-    right: 0;
-    top: 170px;
+    @include position($pos: absolute, $t: 170px, $r: 0);
   }
 }

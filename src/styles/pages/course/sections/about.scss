@@ -1,11 +1,10 @@
+@import "../../../utilities/mixins.scss";
+
 #about {
-  display: flex;
-  justify-content: space-between;
+  @include flex(start, space-between);
   max-width: 1392px;
   margin: 0 auto;
 
-  border-bottom-width: 3px;
-  border-color: var(--borderColor7);
   padding: 20px 24px 64px;
 }
 
@@ -14,16 +13,11 @@
   min-height: 272px;
 
   .drop-down-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    border-radius: 100px;
+    @include flex($content: space-between);
+    @include border-only-radius(100px);
     // color:
     // background:
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 170%;
+    @include font(16px, 600, 170%);
     cursor: pointer;
 
     margin-top: 20px;
@@ -36,18 +30,16 @@
         url("/src/public/svg/ic-arrow-down.svg")
       );
       content: "";
-      height: 16px;
+      @include size(16px);
       margin-left: 12px;
-      width: 16px;
     }
   }
 }
 
 h2 {
-  font-size: 31px;
-  font-weight: 700;
-  margin-bottom: 8px;
+  @include font(31px, 700);
 }
+
 .description-container_short {
   height: 116px;
 }
@@ -57,10 +49,9 @@ h2 {
   overflow: hidden;
 
   &:after {
-    bottom: 0;
+    @include position($pos: absolute, $b: 0);
     box-shadow: 0 0 25px 15px #fbfcfe;
     content: "";
-    position: absolute;
     width: var(--blur-width, 100%);
   }
 
@@ -69,12 +60,9 @@ h2 {
     display: inline-block;
 
     &::after {
+      @include position($pos: absolute, $l: 0, $b: 0);
+      @include size(0px, 2px);
       content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0;
-      height: 2px;
       background-color: #000;
       transition: width 0.3s ease;
     }
@@ -85,13 +73,12 @@ h2 {
   }
 
   p {
-    font-size: 18px;
-    line-height: 160%;
+    @include font($size: 18px, $line-h: 160%);
     margin-bottom: 12px;
   }
 
   blockquote {
-    border-left: solid 4px#000;
+    border-left: 4px solid #000;
     margin-bottom: 24px;
     margin-top: 16px;
     padding-left: 24px;
@@ -101,8 +88,7 @@ h2 {
 .js-code-example {
   max-width: 450px;
   margin-left: 72px;
-  width: 50%;
-  height: 128px;
+  @include size(50%, 128px);
 
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
