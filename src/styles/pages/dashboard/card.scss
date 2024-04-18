@@ -49,6 +49,9 @@
   height: 50px;
   padding: 12px 8px;
 
+  &:not(&:last-of-type) {
+    border-bottom: 1px solid #000;
+  }
   &__name {
     word-break: break-word;
     font-size: 14px;
@@ -105,7 +108,8 @@
   @include flex($flow: column);
   gap: 10px;
 
-  //   &__link {
-  //     @include flex();
-  //   }
+  &__link {
+    @include flex();
+    gap: 4px;
+  }
 }
