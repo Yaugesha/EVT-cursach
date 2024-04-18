@@ -12,6 +12,10 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 24px;
+
+    & > img {
+      width: 153px;
+    }
   }
 
   &__slogan {

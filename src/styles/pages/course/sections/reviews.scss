@@ -79,7 +79,7 @@
   gap: 64px;
 
   width: 1248px;
-  animation: 25s linear 1s infinite running carousel;
+  animation: 25s linear 1s infinite running alternate carousel;
 
   &:hover {
     animation-play-state: paused;
