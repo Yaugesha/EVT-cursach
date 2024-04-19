@@ -18,7 +18,7 @@
   height: $h;
 }
 
-@mixin border($b-w, $color, $radius) {
+@mixin border($b-w: 1px, $color, $radius: 2px) {
   border: $b-w solid $color;
   border-radius: $radius;
 }

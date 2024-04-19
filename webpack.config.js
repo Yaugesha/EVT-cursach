@@ -16,7 +16,7 @@ module.exports = {
   entry: {
     "course-description": "./src/scripts/index.js",
     dashboard: "./src/scripts/dashboard.js",
-    // schedule: "./src/scripts/schedule.js",
+    schedule: "./src/scripts/schedule.js",
   },
   output: {
     filename: "[name].bundle.js",

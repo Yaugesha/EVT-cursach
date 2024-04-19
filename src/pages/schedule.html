@@ -6,45 +6,150 @@
     <title>Schdule</title>
   </head>
   <body>
-    <div class="">
-      <table class="schdule-table">
-        <thead class="schdule-table__head table-head">
-          <tr class="schdule-table__head-row table-head__row">
-            <th class="schdule-table__head-cell table-head__cell">Status</th>
-            <th class="schdule-table__head-cell table-head__cell">
-              Task / Event
-            </th>
-            <th class="schdule-table__head-cell table-head__cell">
-              Start Date (UTC +03:00)
-            </th>
-            <th class="schdule-table__head-cell table-head__cell">
-              End Date (UTC +03:00)
-            </th>
-            <th class="schdule-table__head-cell table-head__cell">Organizer</th>
-            <th class="schdule-table__head-cell table-head__cell">Weight</th>
-            <th class="schdule-table__head-cell table-head__cell">
-              Score / Max
-            </th>
-          </tr>
-        </thead>
-        <tbody class="schdule-table__body table-body">
-          <tr class="schdule-table__body-row table-row">
-            <td class="schdule-table__body-cell table-body__cell">Archived</td>
-            <td class="schdule-table__body-cell table-body__cell">Lecture</td>
-            <td class="schdule-table__body-cell table-body__cell">
-              2023-11-05 14:00
-            </td>
-            <td class="schdule-table__body-cell table-body__cell">
-              2023-11-05 17:00
-            </td>
-            <td class="schdule-table__body-cell table-body__cell">
-              valerydluski
-            </td>
-            <td class="schdule-table__body-cell table-body__cell">×0.1</td>
-            <td class="schdule-table__body-cell table-body__cell">0 / 100</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <main>
+      <div class="table-container">
+        <table class="schdule-table">
+          <thead class="schdule-table__head table-head">
+            <tr class="schdule-table__head-row table-head__row">
+              <th class="schdule-table__head-cell table-head__cell">
+                <div class="table-head__cell-container">
+                  <span class="table-head__cell-text">Status</span>
+                  <button class="table-head__cell-button unstyled-button">
+                    <img
+                      src="../public/svg/table/ic-table-filter.svg"
+                      alt="filter"
+                    />
+                  </button>
+                </div>
+              </th>
+              <th class="schdule-table__head-cell table-head__cell">
+                <div class="table-head__cell-container">
+                  <span class="table-head__cell-text">Task / Event</span>
+                  <button class="table-head__cell-button unstyled-button">
+                    <img src="../public/svg/table/ic-search.svg" alt="search" />
+                  </button>
+                </div>
+              </th>
+              <th class="schdule-table__head-cell table-head__cell">
+                <div class="table-head__cell-container">
+                  <span class="table-head__cell-text">Type</span>
+                  <button class="table-head__cell-button unstyled-button">
+                    <img
+                      src="../public/svg/table/ic-table-filter.svg"
+                      alt="filter"
+                    />
+                  </button>
+                </div>
+              </th>
+              <th class="schdule-table__head-cell table-head__cell">
+                <div class="table-head__cell-container">
+                  <span class="table-head__cell-text">
+                    Start Date (UTC +03:00)
+                  </span>
+                  <div class="table-head__cell-buttons">
+                    <button
+                      class="table-head__cell-button unstyled-button sort-button"
+                    >
+                      <img
+                        src="../public/svg/table/ic-caret-up.svg"
+                        alt="ascending"
+                      />
+                    </button>
+                    <button
+                      class="table-head__cell-button unstyled-button sort-button"
+                    >
+                      <img
+                        src="../public/svg/table/ic-caret-down.svg"
+                        alt="descending"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </th>
+              <th class="schdule-table__head-cell table-head__cell">
+                <div class="table-head__cell-container">
+                  <span class="table-head__cell-text">
+                    End Date (UTC +03:00)
+                  </span>
+                  <div class="table-head__cell-buttons">
+                    <button
+                      class="table-head__cell-button unstyled-button sort-button"
+                    >
+                      <img
+                        src="../public/svg/table/ic-caret-up.svg"
+                        alt="ascending"
+                      />
+                    </button>
+                    <button
+                      class="table-head__cell-button unstyled-button sort-button"
+                    >
+                      <img
+                        src="../public/svg/table/ic-caret-down.svg"
+                        alt="descending"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </th>
+              <th class="schdule-table__head-cell table-head__cell">
+                <div class="table-head__cell-container">
+                  <span class="table-head__cell-text">Organizer</span>
+                  <button class="table-head__cell-button unstyled-button">
+                    <img src="../public/svg/table/ic-search.svg" alt="search" />
+                  </button>
+                </div>
+              </th>
+              <th class="schdule-table__head-cell table-head__cell">Weight</th>
+              <th class="schdule-table__head-cell table-head__cell">
+                Score / Max
+              </th>
+            </tr>
+          </thead>
+          <tbody class="schdule-table__body table-body">
+            <tr class="schdule-table__body-row table-row">
+              <td class="schdule-table__body-cell table-body__cell">
+                <div class="table-body__cell-container">
+                  <div class="table-body__prefix-dot">
+                    <span class="round round_mised"></span>
+                  </div>
+                  <span class="table-body__cell-text">Archived</span>
+                </div>
+              </td>
+              <td class="schdule-table__body-cell table-body__cell">
+                <div class="table-body__cell-container">
+                  <a href="">JS/FE-2023Q4 Intro</a>
+                </div>
+              </td>
+              <td class="schdule-table__body-cell table-body__cell">
+                <div class="table-body__cell-container">
+                  <span class="task__type_lecture">Lecture</span>
+                </div>
+              </td>
+              <td class="schdule-table__body-cell table-body__cell">
+                <div class="table-body__cell-container">
+                  <span>2023-11-05 14:00</span>
+                </div>
+              </td>
+              <td class="schdule-table__body-cell table-body__cell">
+                <div class="table-body__cell-container">
+                  <span>2023-11-05 17:00</span>
+                </div>
+              </td>
+              <td class="schdule-table__body-cell table-body__cell">
+                <div class="table-body__cell-container">
+                  <div class="table-body__prefix-img">
+                    <span class="organizer"></span>
+                  </div>
+                  <span class="table-body__cell-text">valerydluski</span>
+                </div>
+              </td>
+              <td class="schdule-table__body-cell table-body__cell">×0.1</td>
+              <td class="schdule-table__body-cell table-body__cell">0 / 100</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
   </body>
+  <script src="../scripts/schedule.js"></script>
 </html>
