@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise</title>
+  </head>
+  <body>
+    <main>
+      <article class="exercise">
+        <section class="theory">
+          <h2 class="theory__heading">Introduction</h2>
+          <div class="theory__block">
+            <h3 class="theory__block-heading">Modules</h3>
+            <p class="theory__paragraph">
+              So far all the exercises you have seen have used classes.
+              Sometimes we do not need the overhead of creating an object with
+              state, so instead we use <code>module</code>.
+            </p>
+            <p class="theory__paragraph">
+              A module is very similar to a class (in fact,
+              <code>Module</code> is <code>Class</code>' parent in the object
+              hierarchy) - the main difference being that rather than using
+              instance methods, we use class methods. Class methods start with
+              <code>self</code>. and are directly called on a module.
+            </p>
+            <div class="code">
+              <p class="code__label">For example:</p>
+              <pre class="code__wrapper">
+                <code class="code__text">
+                    module Speaker 
+                        def self.echo(something) 
+                            "#{something} ...#{something}" 
+                            end 
+                        end 
+
+                    Speaker.echo("Hello") #=> "Hello ... Hello"
+                </code>
+              </pre>
+            </div>
+          </div>
+          <div class="theory__block">
+            <h3 class="theory__heading">Loops</h3>
+            <div class="code">
+              <p class="code__label">
+                There are several ways to write loops in Ruby, but as we tend to
+                use enumeration rather than looping in general, the most
+                commonly seen loop perhaps is the <code>while</code> loop:
+              </p>
+              <pre class="code__wrapper">
+                <code class="code__text">
+                    counter = 0
+
+                    while counter < 5
+                        counter += 1
+                    end
+                  </code>
+                </pre>
+            </div>
+            <div class="code">
+              <p class="code__label">
+                You can also use its sibling <code>until</code>
+              </p>
+              <pre class="code__wrapper">
+                <code class="code__text">
+                    counter = 0
+
+                    until counter == 5
+                        counter += 1
+                    end
+                </code>
+              </pre>
+            </div>
+          </div>
+        </section>
+        <section class="instructions">
+          <h2 class="theory__heading">Instructions</h2>
+          <div class="instructions__block">
+            <p class="instructions__paragraph">
+              In this exercise you will be working with savings accounts. Each
+              year, the balance of a savings account is updated based on the
+              interest rate. The interest rate the bank gives depends on the
+              amount of money in the accounts (its balance):
+            </p>
+            <ul class="instructions__rules">
+              <li class="instructions__paragraph">
+                0.5% for a non-negative balance less than
+                <code>1000</code> dollars.
+              </li>
+              <li class="instructions__paragraph">
+                1.621% for a positive balance greater than or equal to
+                <code>1000</code> dollars and less than
+                <code>5000</code> dollars.
+              </li>
+              <li class="instructions__paragraph">
+                2.475% for a positive balance greater than or equal to
+                <code>5000</code>
+                dollars.
+              </li>
+              <li class="instructions__paragraph">
+                3.213% for a negative balance (results in negative interest).
+              </li>
+            </ul>
+            <p class="instructions__paragraph">
+              You have three tasks, each of which will deal with the balance and
+              its interest rate.
+            </p>
+            <h3 class="instructions__task">1. Calculate the interest rate</h3>
+            <div class="code">
+              <p class="code__label">
+                Implement the <code>SavingsAccount.interest_rate</code> method
+                to calculate the interest rate based on the specified balance:
+              </p>
+              <pre class="code__wrapper">
+                <code class="code__text">
+                    SavingsAccount.interest_rate(200.75)
+                    #=> 0.5
+                  </code>
+                </pre>
+            </div>
+            <p class="instructions__paragraph">
+              Note that the value returned is an instance of <code>Float</code>.
+            </p>
+            <h3 class="instructions__task">2. Calculate the interest rate</h3>
+            <div class="code">
+              <p class="code__label">
+                Implement the <code>SavingsAccount.interest_rate</code> method
+                to calculate the interest rate based on the specified balance:
+              </p>
+              <pre class="code__wrapper">
+                <code class="code__text">
+                    SavingsAccount.interest_rate(200.75)
+                    #=> 0.5
+                  </code>
+                </pre>
+            </div>
+            <p class="instructions__paragraph">
+              Note that the value returned is an instance of <code>Float</code>.
+            </p>
+            <h3 class="instructions__task">3. Calculate the interest rate</h3>
+            <div class="code">
+              <p class="code__label">
+                Implement the <code>SavingsAccount.interest_rate</code> method
+                to calculate the interest rate based on the specified balance:
+              </p>
+              <pre class="code__wrapper">
+                <code class="code__text">
+                    SavingsAccount.interest_rate(200.75)
+                    #=> 0.5
+                  </code>
+                </pre>
+            </div>
+            <p class="instructions__paragraph">
+              Note that the value returned is an instance of <code>Float</code>.
+            </p>
+          </div>
+        </section>
+      </article>
+    </main>
+  </body>
+  <script src="../scripts/exercise.js"></script>
+</html>

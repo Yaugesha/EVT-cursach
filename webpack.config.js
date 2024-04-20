@@ -1,7 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-const pages = ["course-description", "dashboard", "schedule"];
+const pages = ["course-description", "dashboard", "schedule", "exercise"];
 
 const htmlWebpackPlugins = pages.map((page) => {
   return new HtmlWebpackPlugin({
@@ -17,6 +17,7 @@ module.exports = {
     "course-description": "./src/scripts/index.js",
     dashboard: "./src/scripts/dashboard.js",
     schedule: "./src/scripts/schedule.js",
+    exercise: "./src/scripts/exercise.js",
   },
   output: {
     filename: "[name].bundle.js",
