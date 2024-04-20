@@ -7,26 +7,91 @@
   </head>
   <body>
     <main>
-      <article class="exercise">
-        <section class="theory">
-          <h2 class="theory__heading">Introduction</h2>
-          <div class="theory__block">
-            <h3 class="theory__block-heading">Modules</h3>
-            <p class="theory__paragraph">
-              So far all the exercises you have seen have used classes.
-              Sometimes we do not need the overhead of creating an object with
-              state, so instead we use <code>module</code>.
-            </p>
-            <p class="theory__paragraph">
-              A module is very similar to a class (in fact,
-              <code>Module</code> is <code>Class</code>' parent in the object
-              hierarchy) - the main difference being that rather than using
-              instance methods, we use class methods. Class methods start with
-              <code>self</code>. and are directly called on a module.
-            </p>
-            <div class="code">
-              <p class="code__label">For example:</p>
-              <pre class="code__wrapper">
+      <article class="solution">
+        <section class="step">
+          <h3 class="step__heading">Solve Savings Account</h3>
+          <p class="step__description">
+            Continue work on this exercise. Solve it via Exercism's in-browser
+            editor or locally in your own environment, using our CLI to download
+            and submit.
+          </p>
+          <h4 class="step__sub-heading">VIA EXERCISM EDITOR</h4>
+          <a class="editor-link" href="">Start in editor</a>
+          <h4 class="step__sub-heading">WORK LOCALLY (VIA CLI)</h4>
+          <button class="instalation-banner">
+            <img src="../public/svg/exercise/wizard-prompt.svg" alt="wizard" />
+            <div class="instalation-banner__info">
+              <p class="instalation-banner__heading">
+                Install Exercism locally
+              </p>
+              <p class="instalation-banner__text">
+                Use our wizard to setup Exercism to work on your local machine.
+              </p>
+            </div>
+          </button>
+          <div class="task-link">
+            <code class="task-link__command">
+              exercism download --track=ruby --exercise=savings-account
+            </code>
+            <img
+              class="task-link__copy"
+              src="../public/svg/exercise/ic-copy.svg"
+              alt="copy"
+            />
+          </div>
+          <a class="instalation-link" href="">
+            Learn more about solving exercises locally
+            <img src="../public/svg/ic-arrow-left.svg" alt="" />
+          </a>
+        </section>
+        <section class="step_locked">
+          <h3 class="step__heading_locked">Dig Deeper</h3>
+        </section>
+        <section class="step_locked">
+          <h3 class="step__heading_locked">Complete your solution</h3>
+        </section>
+        <section class="step_locked">
+          <h3 class="step__heading_locked">Publish your solution</h3>
+        </section>
+      </article>
+      <div>
+        <article class="goals">
+          <h3 class="goals__heading">Exercise Learning goals</h3>
+          <p class="goals__description">
+            While completing Savings Account, you'll learn
+            <strong>2 concepts:</strong>
+          </p>
+          <div class="goals__skills concepts">
+            <a class="concept" href="">
+              <span class="concept__logo">Lo</span>
+              Loops
+            </a>
+            <a class="concept" href="">
+              <span class="concept__logo">Mo</span>
+              Modules
+            </a>
+          </div>
+        </article>
+        <article class="exercise">
+          <section class="theory">
+            <h2 class="theory__heading">Introduction</h2>
+            <div class="theory__block">
+              <h3 class="theory__block-heading">Modules</h3>
+              <p class="theory__paragraph">
+                So far all the exercises you have seen have used classes.
+                Sometimes we do not need the overhead of creating an object with
+                state, so instead we use <code>module</code>.
+              </p>
+              <p class="theory__paragraph">
+                A module is very similar to a class (in fact,
+                <code>Module</code> is <code>Class</code>' parent in the object
+                hierarchy) - the main difference being that rather than using
+                instance methods, we use class methods. Class methods start with
+                <code>self</code>. and are directly called on a module.
+              </p>
+              <div class="code">
+                <p class="code__label">For example:</p>
+                <pre class="code__wrapper">
                 <code class="code__text">
                     module Speaker 
                         def self.echo(something) 
@@ -37,17 +102,17 @@
                     Speaker.echo("Hello") #=> "Hello ... Hello"
                 </code>
               </pre>
+              </div>
             </div>
-          </div>
-          <div class="theory__block">
-            <h3 class="theory__heading">Loops</h3>
-            <div class="code">
-              <p class="code__label">
-                There are several ways to write loops in Ruby, but as we tend to
-                use enumeration rather than looping in general, the most
-                commonly seen loop perhaps is the <code>while</code> loop:
-              </p>
-              <pre class="code__wrapper">
+            <div class="theory__block">
+              <h3 class="theory__heading">Loops</h3>
+              <div class="code">
+                <p class="code__label">
+                  There are several ways to write loops in Ruby, but as we tend
+                  to use enumeration rather than looping in general, the most
+                  commonly seen loop perhaps is the <code>while</code> loop:
+                </p>
+                <pre class="code__wrapper">
                 <code class="code__text">
                     counter = 0
 
@@ -56,12 +121,12 @@
                     end
                   </code>
                 </pre>
-            </div>
-            <div class="code">
-              <p class="code__label">
-                You can also use its sibling <code>until</code>
-              </p>
-              <pre class="code__wrapper">
+              </div>
+              <div class="code">
+                <p class="code__label">
+                  You can also use its sibling <code>until</code>
+                </p>
+                <pre class="code__wrapper">
                 <code class="code__text">
                     counter = 0
 
@@ -70,92 +135,119 @@
                     end
                 </code>
               </pre>
+              </div>
             </div>
+          </section>
+          <section class="instructions">
+            <h2 class="theory__heading">Instructions</h2>
+            <div class="instructions__block">
+              <p class="instructions__paragraph">
+                In this exercise you will be working with savings accounts. Each
+                year, the balance of a savings account is updated based on the
+                interest rate. The interest rate the bank gives depends on the
+                amount of money in the accounts (its balance):
+              </p>
+              <ul class="instructions__rules">
+                <li class="instructions__paragraph">
+                  0.5% for a non-negative balance less than
+                  <code>1000</code> dollars.
+                </li>
+                <li class="instructions__paragraph">
+                  1.621% for a positive balance greater than or equal to
+                  <code>1000</code> dollars and less than
+                  <code>5000</code> dollars.
+                </li>
+                <li class="instructions__paragraph">
+                  2.475% for a positive balance greater than or equal to
+                  <code>5000</code>
+                  dollars.
+                </li>
+                <li class="instructions__paragraph">
+                  3.213% for a negative balance (results in negative interest).
+                </li>
+              </ul>
+              <p class="instructions__paragraph">
+                You have three tasks, each of which will deal with the balance
+                and its interest rate.
+              </p>
+              <h3 class="instructions__task">1. Calculate the interest rate</h3>
+              <div class="code">
+                <p class="code__label">
+                  Implement the <code>SavingsAccount.interest_rate</code> method
+                  to calculate the interest rate based on the specified balance:
+                </p>
+                <pre class="code__wrapper">
+                <code class="code__text">
+                    SavingsAccount.interest_rate(200.75)
+                    #=> 0.5
+                  </code>
+                </pre>
+              </div>
+              <p class="instructions__paragraph">
+                Note that the value returned is an instance of
+                <code>Float</code>.
+              </p>
+              <h3 class="instructions__task">2. Calculate the interest rate</h3>
+              <div class="code">
+                <p class="code__label">
+                  Implement the <code>SavingsAccount.interest_rate</code> method
+                  to calculate the interest rate based on the specified balance:
+                </p>
+                <pre class="code__wrapper">
+                <code class="code__text">
+                    SavingsAccount.interest_rate(200.75)
+                    #=> 0.5
+                  </code>
+                </pre>
+              </div>
+              <p class="instructions__paragraph">
+                Note that the value returned is an instance of
+                <code>Float</code>.
+              </p>
+              <h3 class="instructions__task">3. Calculate the interest rate</h3>
+              <div class="code">
+                <p class="code__label">
+                  Implement the <code>SavingsAccount.interest_rate</code> method
+                  to calculate the interest rate based on the specified balance:
+                </p>
+                <pre class="code__wrapper">
+                <code class="code__text">
+                    SavingsAccount.interest_rate(200.75)
+                    #=> 0.5
+                  </code>
+                </pre>
+              </div>
+              <p class="instructions__paragraph">
+                Note that the value returned is an instance of
+                <code>Float</code>.
+              </p>
+            </div>
+          </section>
+        </article>
+        <article class="extra-info">
+          <div class="contributors">
+            <img
+              class="contributors-img"
+              src="../public/contributors/img-contributor-3.png"
+              alt=""
+            />
+            <p class="contributors__number">1 contributor</p>
           </div>
-        </section>
-        <section class="instructions">
-          <h2 class="theory__heading">Instructions</h2>
-          <div class="instructions__block">
-            <p class="instructions__paragraph">
-              In this exercise you will be working with savings accounts. Each
-              year, the balance of a savings account is updated based on the
-              interest rate. The interest rate the bank gives depends on the
-              amount of money in the accounts (its balance):
-            </p>
-            <ul class="instructions__rules">
-              <li class="instructions__paragraph">
-                0.5% for a non-negative balance less than
-                <code>1000</code> dollars.
-              </li>
-              <li class="instructions__paragraph">
-                1.621% for a positive balance greater than or equal to
-                <code>1000</code> dollars and less than
-                <code>5000</code> dollars.
-              </li>
-              <li class="instructions__paragraph">
-                2.475% for a positive balance greater than or equal to
-                <code>5000</code>
-                dollars.
-              </li>
-              <li class="instructions__paragraph">
-                3.213% for a negative balance (results in negative interest).
-              </li>
-            </ul>
-            <p class="instructions__paragraph">
-              You have three tasks, each of which will deal with the balance and
-              its interest rate.
-            </p>
-            <h3 class="instructions__task">1. Calculate the interest rate</h3>
-            <div class="code">
-              <p class="code__label">
-                Implement the <code>SavingsAccount.interest_rate</code> method
-                to calculate the interest rate based on the specified balance:
-              </p>
-              <pre class="code__wrapper">
-                <code class="code__text">
-                    SavingsAccount.interest_rate(200.75)
-                    #=> 0.5
-                  </code>
-                </pre>
-            </div>
-            <p class="instructions__paragraph">
-              Note that the value returned is an instance of <code>Float</code>.
-            </p>
-            <h3 class="instructions__task">2. Calculate the interest rate</h3>
-            <div class="code">
-              <p class="code__label">
-                Implement the <code>SavingsAccount.interest_rate</code> method
-                to calculate the interest rate based on the specified balance:
-              </p>
-              <pre class="code__wrapper">
-                <code class="code__text">
-                    SavingsAccount.interest_rate(200.75)
-                    #=> 0.5
-                  </code>
-                </pre>
-            </div>
-            <p class="instructions__paragraph">
-              Note that the value returned is an instance of <code>Float</code>.
-            </p>
-            <h3 class="instructions__task">3. Calculate the interest rate</h3>
-            <div class="code">
-              <p class="code__label">
-                Implement the <code>SavingsAccount.interest_rate</code> method
-                to calculate the interest rate based on the specified balance:
-              </p>
-              <pre class="code__wrapper">
-                <code class="code__text">
-                    SavingsAccount.interest_rate(200.75)
-                    #=> 0.5
-                  </code>
-                </pre>
-            </div>
-            <p class="instructions__paragraph">
-              Note that the value returned is an instance of <code>Float</code>.
-            </p>
-          </div>
-        </section>
-      </article>
+          <a class="link" href="">
+            <img
+              class="link__icon"
+              src="../public/svg/socials/ic-github-logo.svg"
+              alt=""
+            />
+            Edit via GitHub
+            <img
+              class="link__open-icon"
+              src="../public/svg/ic-link.svg"
+              alt="The link opens in a new window or tab"
+            />
+          </a>
+        </article>
+      </div>
     </main>
   </body>
   <script src="../scripts/exercise.js"></script>

@@ -26,8 +26,8 @@
     &:after {
       display: block;
       background-image: var(
-        --dropdown-button__arrow,
-        url("/src/public/svg/ic-arrow-down.svg")
+        --dropdown-button__chevron,
+        url("/src/public/svg/ic-chevron-down.svg")
       );
       content: "";
       @include size(16px);

@@ -1,5 +1,5 @@
-import arrowDown from "../public/svg/ic-arrow-down.svg";
-import arrowUp from "../public/svg/ic-arrow-up.svg";
+import chevronDown from "../public/svg/ic-chevron-down.svg";
+import chevronUp from "../public/svg/ic-chevron-up.svg";
 
 export function dropdownButton() {
   const deropDownButton = document.querySelector(".drop-down-button");
@@ -12,10 +12,16 @@ export function dropdownButton() {
     if (button.textContent === "Read less") {
       button.textContent = "Read more on JavaScript";
       description.style.setProperty("--blur-width", "100%");
-      button.style.setProperty("--dropdown-button__arrow", `url(${arrowDown})`);
+      button.style.setProperty(
+        "--dropdown-button__chevron",
+        `url(${chevronDown})`
+      );
     } else {
       button.textContent = "Read less";
-      button.style.setProperty("--dropdown-button__arrow", `url(${arrowUp})`);
+      button.style.setProperty(
+        "--dropdown-button__chevron",
+        `url(${chevronUp})`
+      );
       description.style.setProperty("--blur-width", "0%");
     }
 
