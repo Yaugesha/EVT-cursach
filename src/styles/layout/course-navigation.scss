@@ -1,0 +1,23 @@
+@import "../utilities/mixins.scss";
+
+header {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.course-navigation {
+  padding: 0px 24px;
+
+  &__list {
+    @include flex();
+    gap: 32px;
+  }
+  &__navigation-link {
+    @include flex();
+    gap: 10px;
+    @include font(14px, 400, 46px);
+    color: #000;
+
+    cursor: pointer;
+  }
+}

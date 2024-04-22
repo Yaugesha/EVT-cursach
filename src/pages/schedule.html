@@ -6,8 +6,94 @@
     <title>Schdule</title>
   </head>
   <body>
+    <header class="course-header">
+      <nav class="course-navigation">
+        <ul class="course-navigation__list">
+          <li class="course-navigation__list-item">
+            <a
+              class="course-navigation__navigation-link"
+              href="./dashboard.html"
+            >
+              <img src="../public/svg/course/ic-dashboard.svg" alt="" />
+              <span>Dashboard</span></a
+            >
+          </li>
+          <li class="course-navigation__list-item">
+            <a
+              class="course-navigation__navigation-link"
+              href="./schedule.html"
+            >
+              <img src="../public/svg/dashboard/ic-calendar.svg" alt="" />
+              <span>Schedule</span></a
+            >
+          </li>
+          <li class="course-navigation__list-item">
+            <a class="course-navigation__navigation-link" href="">
+              <img src="../public/svg/course/ic-mic.svg" alt="" />
+              <span>Interviews</span></a
+            >
+          </li>
+          <li class="course-navigation__list-item">
+            <a class="course-navigation__navigation-link" href="">
+              <img src="../public/svg/course/ic-course-stats.svg" alt="" />
+              <span>Course Statistics</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
     <main>
-      <div class="table-container">
+      <section class="table-sort">
+        <div class="table-sort__tabs">
+          <div class="table-sort__tab">
+            <span class="table-sort__tab-name">All</span>
+            <span class="table-sort__tab-data">99+</span>
+          </div>
+          <div class="table-sort__tab">
+            <span class="table-sort__tab-name">Avilable</span>
+            <span class="table-sort__tab-data">15</span>
+          </div>
+          <div class="table-sort__tab">
+            <span class="table-sort__tab-name">Review</span>
+            <!-- <span class="table-sort__tab-data">99+</span> -->
+          </div>
+          <div class="table-sort__tab">
+            <span class="table-sort__tab-name">Feauture</span>
+            <span class="table-sort__tab-data">80</span>
+          </div>
+          <div class="table-sort__tab">
+            <span class="table-sort__tab-name">Missed</span>
+            <span class="table-sort__tab-data">4</span>
+          </div>
+          <div class="table-sort__tab">
+            <span class="table-sort__tab-name">Done</span>
+            <span class="table-sort__tab-data">20</span>
+          </div>
+          <div class="table-sort__tab">
+            <span class="table-sort__tab-name">Archived</span>
+            <span class="table-sort__tab-data">24</span>
+          </div>
+        </div>
+        <div class="table-sort__extrab-tabs">
+          <button class="table-sort__extrab-tab unstyled-button">
+            <img
+              class="table-sort__extrab-tab-img"
+              src="../public/svg/table/ic-settings.svg"
+              alt=""
+            />
+            <span src="table-sort__extrab-tab-name">Settings</span>
+          </button>
+          <button class="table-sort__extrab-tab unstyled-button">
+            <span src="table-sort__extrab-tab-name">More</span>
+            <img
+              class="table-sort__extrab-tab-img"
+              src="../public/svg/ic-chevron-down.svg"
+              alt=""
+            />
+          </button>
+        </div>
+      </section>
+      <section class="table-container">
         <table class="schdule-table">
           <thead class="schdule-table__head table-head">
             <tr class="schdule-table__head-row table-head__row">
@@ -148,7 +234,7 @@
             </tr>
           </tbody>
         </table>
-      </div>
+      </section>
     </main>
   </body>
   <script src="../scripts/schedule.js"></script>

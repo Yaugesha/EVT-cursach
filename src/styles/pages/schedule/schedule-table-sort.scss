@@ -1,0 +1,46 @@
+@import "../../utilities/mixins.scss";
+
+.table-sort {
+  @include flex($content: space-between);
+  padding: 0px 24px;
+
+  &__tabs {
+    @include flex();
+    gap: 32px;
+  }
+
+  &__tab {
+    @include flex();
+    gap: 8px;
+    padding: 12px 0px;
+    cursor: pointer;
+
+    &-name {
+      @include font(14px, 300, 160%);
+    }
+
+    &-data {
+      @include font(12px, 300, 20px);
+      padding: 0px 8px;
+      border-radius: 10px;
+      background-color: gainsboro;
+    }
+  }
+
+  &__extrab-tabs {
+    @include flex();
+    gap: 32px;
+  }
+
+  &__extrab-tab {
+    @include flex();
+    gap: 8px;
+    height: 32px;
+    padding: 4px 15px;
+    @include border(1px, grey, 6px);
+
+    &-img {
+      @include size(14px);
+    }
+  }
+}
