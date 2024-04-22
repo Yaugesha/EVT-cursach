@@ -1,3 +1,5 @@
+@import "./colors.scss";
+
 @mixin flex($items: center, $content: start, $flow: row) {
   display: flex;
   flex-flow: $flow;
@@ -32,13 +34,62 @@
   border-radius: $radius;
 }
 
-@mixin font($size: 1rem, $weight: 400, $line-h: 1) {
+@mixin shadow($alpha: 0.35) {
+  box-shadow: rgba(0, 0, 0, $alpha) 0px 5px 15px;
+}
+
+@mixin font($size: 1rem, $weight: 400, $line-h: 1, $color: $black) {
   font-size: $size;
   font-weight: $weight;
   line-height: $line-h;
+  color: $color;
 }
 
 @mixin margin-y($top, $bottom: $top) {
   margin-top: $top;
   margin-bottom: $bottom;
+}
+
+@mixin button(
+  $padding,
+  $flex-content: center,
+  $color: $white,
+  $background: $button
+) {
+  @include flex($content: $flex-content);
+  padding: $padding;
+  @include border-only-radius(100px);
+  background: $background;
+
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+@mixin button-hover($background: $button-hover, $color: $white) {
+  color: $color;
+  background: $background;
+}
+
+@mixin button-active($background: $button-active, $color: $white) {
+  color: $color;
+  background: $background;
+}
+
+@mixin link() {
+  color: $link;
+  position: relative;
+  text-decoration: underline;
+  display: inline-block;
+}
+
+@mixin link-hover-after() {
+  // width: 100%;
+}
+
+@mixin link-after() {
+  // @include position($pos: absolute, $l: 0, $b: 0);
+  // @include size(0px, 2px);
+  // content: "";
+  // background-color: $link;
+  // transition: width 0.3s ease;
 }

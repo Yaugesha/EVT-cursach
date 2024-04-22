@@ -1,3 +1,5 @@
+@import "../utilities/mixins.scss";
+
 .page-header {
   max-width: 1392px;
   margin: 0 auto;
@@ -61,6 +63,16 @@
       line-height: 140%;
       font-weight: 600;
       font-size: 18px;
+    }
+  }
+
+  &__about-course {
+    @include flex(start, space-evenly, column);
+    height: 125px;
+
+    a:nth-child(2) {
+      @include button((8px 24px), space-between);
+      @include font(16px, 600, 170%, $white);
     }
   }
 

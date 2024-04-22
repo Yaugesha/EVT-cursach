@@ -53,7 +53,14 @@ module.exports = {
       },
     ],
   },
-  plugins: [...htmlWebpackPlugins],
+  plugins: [
+    ...htmlWebpackPlugins,
+    new HtmlWebpackPlugin({
+      filename: `./index.html`,
+      chunks: ["course-description"],
+      template: `./src/pages/course-description.html`,
+    }),
+  ],
   devServer: {
     static: {
       directory: path.join(__dirname, "dist"),
