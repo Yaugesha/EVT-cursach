@@ -17,10 +17,18 @@
       </div>
       <nav>
         <ul class="site-navigation">
-          <li class="navigation__tab_active"><a href="#about">About</a></li>
-          <li class="navigation__tab"><a href="#exercises">Exercises</a></li>
-          <li class="navigation__tab"><a href="#features">Features</a></li>
-          <li class="navigation__tab"><a href="#reviews">Reviews</a></li>
+          <li class="site-navigation__tab_active">
+            <a class="site-navigation__tab-link" href="#about">About</a>
+          </li>
+          <li class="site-navigation__tab">
+            <a class="site-navigation__tab-link" href="#exercises">All paths</a>
+          </li>
+          <li class="site-navigation__tab">
+            <a class="site-navigation__tab-link" href="#features">Community</a>
+          </li>
+          <li class="site-navigation__tab">
+            <a class="site-navigation__tab-link" href="#reviews">Support</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -81,7 +89,9 @@
               </div>
             </a>
           </div>
-          <a href="../pages/schedule.html" class="">Become a student</a>
+          <a href="../pages/schedule.html" class="link-button"
+            >Become a student</a
+          >
         </div>
       </div>
     </header>
@@ -174,7 +184,7 @@
           </h2>
           <p class="about-exercises__description">
             Get better at programming through fun, rewarding coding exercises
-            that test your understanding of concepts with OUR COMPANY.
+            that test your understanding of concepts with ProgForce.
           </p>
         </div>
         <div class="accordion">
@@ -184,67 +194,34 @@
               <span>4 lessons • 8 projects • 4 tests</span>
             </div>
             <span>
-              <a href="">Expand all sections</a>
+              <a class="link" href="">Expand all sections(popup corse here)</a>
             </span>
           </div>
           <div class="tab">
-            <input type="radio" id="tab-1" name="tab" />
-            <label class="tab__label" for="tab-1">About</label>
+            <input type="checkbox" id="tab-1" name="tab" />
+            <label class="tab__label" for="tab-1">
+              <div class="tab__info">
+                <span class="tab__number">1</span>
+                <div class="tab__describtion">
+                  <h4 class="tab__name">Introduction</h4>
+                  <p class="tab__short-describtion">
+                    In this course, you will learn about JavaScript data types,
+                    built-in methods, and variables.
+                  </p>
+                </div>
+              </div>
+            </label>
             <div class="tab__content">
-              JavaScript is a programming language that allows web pages to be
-              dynamic. It is an interpreted language, which means that it
-              doesn't need to be compiled: instead the interpreter (such as a
-              web browser) will parse the code and turn it into code that their
-              machine can run - suitable for creating dynamic websites that can
-              run on any browser!
-            </div>
-          </div>
-          <div class="tab">
-            <input type="radio" id="tab-2" name="tab" />
-            <label class="tab__label" for="tab-2">About</label>
-            <div class="tab__content">
-              JavaScript is a programming language that allows web pages to be
-              dynamic. It is an interpreted language, which means that it
-              doesn't need to be compiled: instead the interpreter (such as a
-              web browser) will parse the code and turn it into code that their
-              machine can run - suitable for creating dynamic websites that can
-              run on any browser!
-            </div>
-          </div>
-          <div class="tab">
-            <input type="radio" id="tab-3" name="tab" />
-            <label class="tab__label" for="tab-3">About</label>
-            <div class="tab__content">
-              JavaScript is a programming language that allows web pages to be
-              dynamic. It is an interpreted language, which means that it
-              doesn't need to be compiled: instead the interpreter (such as a
-              web browser) will parse the code and turn it into code that their
-              machine can run - suitable for creating dynamic websites that can
-              run on any browser!
-            </div>
-          </div>
-          <div class="tab">
-            <input type="radio" id="tab-4" name="tab" />
-            <label class="tab__label" for="tab-4">About</label>
-            <div class="tab__content">
-              JavaScript is a programming language that allows web pages to be
-              dynamic. It is an interpreted language, which means that it
-              doesn't need to be compiled: instead the interpreter (such as a
-              web browser) will parse the code and turn it into code that their
-              machine can run - suitable for creating dynamic websites that can
-              run on any browser!
-            </div>
-          </div>
-          <div class="tab">
-            <input type="radio" id="tab-5" name="tab" />
-            <label class="tab__label" for="tab-5">About</label>
-            <div class="tab__content">
-              JavaScript is a programming language that allows web pages to be
-              dynamic. It is an interpreted language, which means that it
-              doesn't need to be compiled: instead the interpreter (such as a
-              web browser) will parse the code and turn it into code that their
-              machine can run - suitable for creating dynamic websites that can
-              run on any browser!
+              <img
+                class="img"
+                src="../public/svg/exercise/ic-opened-step.svg"
+                alt=""
+              />
+              <span>Lecture</span>
+              <p>
+                In this course, you will learn about JavaScript data types,
+                built-in methods, and variables.
+              </p>
             </div>
           </div>
         </div>
@@ -564,7 +541,7 @@
             </ul>
           </div>
           <div>
-            <h3>Buides</h3>
+            <h3>Guides</h3>
             <ul>
               <li>Community guides</li>
               <li>Instalation guides</li>

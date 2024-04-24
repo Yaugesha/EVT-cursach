@@ -11,11 +11,13 @@ main {
 
 .schdule-table {
   width: 100%;
+  @include border-only-radius(8px);
+  @include shadow();
 }
 
 .table-head {
   &__cell {
-    @include border(1px, #000);
+    border-bottom: 1px solid $grey-300;
     text-align: end;
     padding: 12px 8px;
   }
@@ -50,7 +52,7 @@ main {
 
 .table-body {
   &__cell {
-    @include border(1px, #000);
+    border-bottom: 1px solid $grey-300;
     padding: 12px 8px;
 
     &:nth-last-of-type(2),

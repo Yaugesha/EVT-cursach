@@ -53,7 +53,7 @@
 @mixin button(
   $padding,
   $flex-content: center,
-  $color: $white,
+  $color: $black,
   $background: $button
 ) {
   @include flex($content: $flex-content);
@@ -65,31 +65,40 @@
   cursor: pointer;
 }
 
-@mixin button-hover($background: $button-hover, $color: $white) {
+@mixin button-hover($background: $button-hover, $color: $black) {
   color: $color;
   background: $background;
 }
 
-@mixin button-active($background: $button-active, $color: $white) {
+@mixin button-active($background: $button-active, $color: $black) {
   color: $color;
   background: $background;
 }
 
 @mixin link() {
   color: $link;
-  position: relative;
   text-decoration: underline;
-  display: inline-block;
 }
 
-@mixin link-hover-after() {
-  // width: 100%;
+@mixin nav-link() {
+  position: relative;
+  color: $link;
+  display: flex;
+  align-items: center;
+  padding: 16px 8px;
+  line-height: 140%;
+  font-weight: 600;
+  font-size: 18px;
 }
 
-@mixin link-after() {
-  // @include position($pos: absolute, $l: 0, $b: 0);
-  // @include size(0px, 2px);
-  // content: "";
-  // background-color: $link;
-  // transition: width 0.3s ease;
+@mixin nav-link-hover-after() {
+  width: 100%;
+}
+
+@mixin nav-link-after() {
+  @include position($pos: absolute, $l: 0, $b: 0);
+  @include size(0px, 2px);
+  content: "";
+  background-color: $link;
+  transition: width 0.3s ease;
 }

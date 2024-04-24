@@ -1,6 +1,9 @@
+@import "../utilities/mixins.scss";
+
 .site-header {
-  display: flex;
-  justify-content: space-between;
+  @include flex(center, space-between);
+  max-width: 1392px;
+  margin: 0 auto;
   padding: 20px 24px;
 
   .header-logo {
@@ -9,11 +12,20 @@
   }
 
   .site-navigation {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    @include flex(center, space-between);
     gap: 32px;
+
+    &__tab-link {
+      @include nav-link();
+
+      &:after {
+        @include nav-link-after();
+      }
+
+      &:hover::after {
+        @include nav-link-hover-after();
+      }
+    }
   }
 
   .burger-menu-icon {

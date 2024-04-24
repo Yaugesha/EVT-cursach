@@ -13,15 +13,17 @@
   min-height: 272px;
 
   .drop-down-button {
-    @include flex($content: space-between);
-    @include border-only-radius(100px);
-    // color:
-    // background:
+    @include button((8px 24px), space-between);
     @include font(16px, 600, 170%);
-    cursor: pointer;
-
     margin-top: 20px;
-    padding: 8px 24px;
+
+    &:hover {
+      @include button-hover();
+    }
+
+    &:active {
+      @include button-active();
+    }
 
     &:after {
       display: block;
@@ -56,20 +58,7 @@ h2 {
   }
 
   a {
-    position: relative;
-    display: inline-block;
-
-    &::after {
-      @include position($pos: absolute, $l: 0, $b: 0);
-      @include size(0px, 2px);
-      content: "";
-      background-color: #000;
-      transition: width 0.3s ease;
-    }
-
-    &:hover::after {
-      width: 100%;
-    }
+    @include link();
   }
 
   p {
