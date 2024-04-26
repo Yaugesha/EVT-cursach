@@ -48,8 +48,11 @@
     &:checked {
       & ~ .tab__content {
         max-height: 10rem;
-        padding-top: 24px;
-        padding-bottom: 24px;
+        padding: 8px 0px;
+
+        &:first-of-type {
+          margin-top: 24px;
+        }
       }
 
       & ~ .tab__label::after {
@@ -105,7 +108,8 @@
     max-height: 0;
     // min-width: 172px;
     margin-left: 56px;
-    @include margin-y(24px);
+
+    margin-top: 8px;
 
     overflow: hidden;
     transition: all 0.3s;
@@ -119,4 +123,5 @@
 .link {
   @include link();
   text-decoration: none;
+  cursor: pointer;
 }

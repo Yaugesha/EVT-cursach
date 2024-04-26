@@ -89,9 +89,9 @@
               </div>
             </a>
           </div>
-          <a href="../pages/schedule.html" class="link-button"
-            >Become a student</a
-          >
+          <button class="link-button popup-open-button">
+            Become a student
+          </button>
         </div>
       </div>
     </header>
@@ -194,7 +194,7 @@
               <span>4 lessons • 8 projects • 4 tests</span>
             </div>
             <span>
-              <a class="link" href="">Expand all sections(popup corse here)</a>
+              <a class="link popup-open-button">Expand all sections</a>
             </span>
           </div>
           <div class="tab">
@@ -211,6 +211,57 @@
                 </div>
               </div>
             </label>
+            <div class="tab__content">
+              <img
+                class="img"
+                src="../public/svg/exercise/ic-opened-step.svg"
+                alt=""
+              />
+              <span>Lecture</span>
+              <p>
+                In this course, you will learn about JavaScript data types,
+                built-in methods, and variables.
+              </p>
+            </div>
+          </div>
+          <div class="tab">
+            <input type="checkbox" id="tab-2" name="tab" />
+            <label class="tab__label" for="tab-2">
+              <div class="tab__info">
+                <span class="tab__number">2</span>
+                <div class="tab__describtion">
+                  <h4 class="tab__name">Introduction</h4>
+                  <p class="tab__short-describtion">
+                    In this course, you will learn about JavaScript data types,
+                    built-in methods, and variables.
+                  </p>
+                </div>
+              </div>
+            </label>
+            <div class="tab__content">
+              <img
+                class="img"
+                src="../public/svg/exercise/ic-opened-step.svg"
+                alt=""
+              />
+              <span>Lecture</span>
+              <p>
+                In this course, you will learn about JavaScript data types,
+                built-in methods, and variables.
+              </p>
+            </div>
+            <div class="tab__content">
+              <img
+                class="img"
+                src="../public/svg/exercise/ic-opened-step.svg"
+                alt=""
+              />
+              <span>Lecture</span>
+              <p>
+                In this course, you will learn about JavaScript data types,
+                built-in methods, and variables.
+              </p>
+            </div>
             <div class="tab__content">
               <img
                 class="img"
@@ -500,6 +551,42 @@
             </div>
           </div>
         </div>
+      </section>
+      <section id="form" class="popup">
+        <form class="form" action="../pages/dashboard.html">
+          <a class="form__header" href="../pages/main.html">
+            <img src="../public/logo.png" alt="logo" />
+          </a>
+          <button class="form__oauth oauth popup-close-button">
+            <span class="oauth__text">Sign in with github</span>
+            <img
+              class="oauth__logo"
+              src="../public/svg/socials/ic-github-logo.svg"
+              alt="github"
+            />
+          </button>
+          <span class="form__devidor">OR</span>
+          <div class="form__inputs">
+            <div class="input-container">
+              <div class="label-image-container">
+                <img src="../public/svg/dashboard/ic-trophy.svg" alt="" />
+              </div>
+              <input type="text" placeholder="email" />
+            </div>
+            <div class="input-container">
+              <div class="label-image-container">
+                <img src="../public/svg/dashboard/ic-flame.svg" alt="" />
+              </div>
+              <input type="password" placeholder="password" />
+            </div>
+          </div>
+          <a class="form__forgot-password popup-close-button" href="">
+            Forgot password?
+          </a>
+          <button type="submit" class="form__action-button popup-close-button">
+            Sign in
+          </button>
+        </form>
       </section>
     </main>
     <footer>

@@ -25,8 +25,9 @@
   border-radius: $radius;
 }
 
-@mixin border-b($b-w, $color) {
+@mixin border-b($b-w, $color, $radius: 0px) {
   border-bottom: $b-w solid $color;
+  border-radius: $radius;
 }
 
 @mixin border-only-radius($radius) {
