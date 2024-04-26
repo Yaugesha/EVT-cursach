@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Theory</title>
+  <script defer src="../theory.bundle.js"></script></head>
+  <body>
+    <main>
+      <div class="wrapper">
+        <article>
+          <section title="introduction">
+            <h3 class="heading" id="introduction">
+              <a href="#introduction" class="anchor-link">Introduction</a>
+            </h3>
+            <p class="paragraph">
+              Separate from the <strong>module pattern</strong> that we
+              discussed in an earlier lesson, “modules” is a feature that
+              arrived with ES6. ES6 modules are starting to appear in many code
+              bases around the net and getting them up and running will give us
+              a chance to explore some new parts of the JavaScript ecosystem, so
+              it's going to be a worthy excursion!
+            </p>
+            <p class="paragraph">
+              Don't be fooled! We're going to cover much more than just the new
+              module syntax in this lesson! Before we can really
+              <em>use</em> these modules, we're going to have to learn about
+              <strong>npm</strong> and <strong>webpack</strong>, which are both
+              topics that will be <em>very</em> useful to you even beyond this
+              lesson. In the end, the modules themselves are simple to
+              implement, so we're going to take this chance to learn about a few
+              other things.
+            </p>
+          </section>
+          <section data-title="lesson-overview">
+            <h3 class="heading" id="lesson-overview">
+              <a href="#lesson-overview" class="anchor-link">Lesson overview</a>
+            </h3>
+            <p class="paragraph">
+              This section contains a general overview of topics that you will
+              learn in this lesson.
+            </p>
+            <ul>
+              <li>
+                Explain what npm is and where it was commonly used before being
+                adopted on the frontend.
+              </li>
+              <li>
+                Describe what <code>npm init</code> does and what
+                <code>package.json</code> is.
+              </li>
+              <li>Know how to install packages using npm.</li>
+              <li>
+                Describe what a JavaScript module bundler like webpack is.
+              </li>
+              <li>
+                Explain what the concepts “entry” and “output” mean in relation
+                to webpack.
+              </li>
+              <li>Briefly explain what a development dependency is.</li>
+              <li>
+                Explain what “transpiling code” means and how it relates to
+                front-end development.
+              </li>
+              <li>
+                Briefly describe what a task runner is and how it's used in
+                front-end development.
+              </li>
+              <li>Describe how to write an npm automation script.</li>
+              <li>
+                Explain one of the main benefits of writing code in modules.
+              </li>
+              <li>Explain “named” exports and “default” exports.</li>
+            </ul>
+          </section>
+          <section data-title="the-history-of-javascript">
+            <h3 class="heading" id="the-history-of-javascript">
+              <a href="#the-history-of-javascript" class="anchor-link"
+                >The history of JavaScript</a
+              >
+            </h3>
+            <p class="paragraph">
+              Why do we even need or want this stuff? What do you gain from all
+              of this added complexity? These are good questions… with good
+              answers.
+            </p>
+            <ul>
+              <li>
+                Read this little
+                <a
+                  href="https://peterxjang.com/blog/modern-javascript-explained-for-dinosaurs.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  history lesson on JavaScript, package managers, and bundling
+                </a>
+                . It's long, but it puts what we're doing here in great
+                perspective. This article is a bit older, and those who have
+                coded along with the example have frequently run into issues, so
+                we don't suggest that you code along (you'll be following along
+                with the official Webpack documentation later). Nevertheless,
+                this article is extremely important conceptually and really
+                clarifies the 'WHY' of the rest of this lesson.
+              </li>
+            </ul>
+          </section>
+          <section data-title="npm">
+            <h3 class="heading" id="npm">
+              <a href="#npm" class="anchor-link">npm</a>
+            </h3>
+            <p class="paragraph">
+              The <strong>node package manager</strong> is a command-line tool
+              that gives you access to a gigantic repository of plugins,
+              libraries and tools. If you have done our Fundamentals course, you
+              will probably have encountered it when you
+              <a
+                href="https://github.com/TheOdinProject/javascript-exercises#how-to-use-these-exercises"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                installed the Jest testing framework
+              </a>
+              to do our exercises.
+            </p>
+            <p class="paragraph">
+              Read through the npm links below but don't worry about running any
+              of the commands on your computer. This section is about growing
+              your awareness of npm. You will have an opportunity to use what
+              you learn here in upcoming projects.
+            </p>
+            <ol>
+              <li>
+                Take a couple minutes to read the
+                <a
+                  href="https://docs.npmjs.com/getting-started/what-is-npm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  About npm
+                </a>
+                page - a great introduction to npm.
+              </li>
+              <li>
+                This tutorial teaches you
+                <a
+                  href="https://docs.npmjs.com/downloading-and-installing-packages-locally"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  how to install packages with npm
+                </a>
+                .
+              </li>
+              <li>
+                This tutorial covers
+                <a
+                  href="https://docs.npmjs.com/creating-a-package-json-file"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  the <code>package.json</code> file</a
+                >
+                , which you can use to manage your project's dependencies.
+              </li>
+              <li>
+                Read this article on
+                <a
+                  href="https://dev.to/moimikey/demystifying-devdependencies-and-dependencies-5ege"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  development dependencies
+                </a>
+                to learn what they are and how to use them. Note that when the
+                author says “all required dependencies are pulled together and
+                bundled”, they are referring to any dependencies needed at
+                runtime. Dependencies like Webpack (which we will cover shortly)
+                are only used during development to build apps and so are not
+                required at runtime.
+              </li>
+              <li>
+                If you run into trouble at any point you can check out
+                <a
+                  href="https://docs.npmjs.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  the official npm docs
+                </a>
+                for more tutorials and documentation.
+              </li>
+            </ol>
+          </section>
+          <section data-title="yarn">
+            <h3 class="heading" id="yarn">
+              <a href="#yarn" class="anchor-link">Yarn?</a>
+            </h3>
+            <p class="paragraph">
+              At some point, you will probably run into
+              <a
+                href="https://yarnpkg.com/en/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Yarn
+              </a>
+              - a replacement for the default <code>npm</code>. For the most
+              part, it does the same things, though it <em>does</em> have a few
+              more features. Recent versions of <code>npm</code> have
+              incorporated some of the best features of Yarn, so using it won't
+              offer you any real advantages at this point in your career. It
+              <em>is</em> a fine package manager, however, and may be worth your
+              consideration in the future.
+            </p>
+          </section>
+          <section data-title="webpack-and-bundlers">
+            <h3 class="heading" id="webpack-and-bundlers">
+              <a href="#webpack-and-bundlers" class="anchor-link">
+                Webpack and bundlers
+              </a>
+            </h3>
+            <p class="paragraph">
+              So far, your projects have had relatively basic file structures.
+              As project complexity grows, so too will the benefits of
+              well-organized code. A project consisting of a single, long file
+              with lots of code can be made easier to navigate and maintain by
+              being broken down into multiple smaller files (modules). Further
+              benefits of writing code in modules will come below when we
+              introduce ES6 modules.
+            </p>
+            <p class="paragraph">
+              But there's a problem! The browser would need to make a separate
+              HTTP request for each file. The more files you have, the more
+              costly this becomes, particularly on slower networks and would
+              only increase if you also imported third-party libraries into your
+              app.
+            </p>
+            <p class="paragraph">
+              What if we had a way to write multiple files and/or import
+              multiple third-party libraries but eventually combine them all
+              into fewer files at the end so the browser did not have to make so
+              many requests?
+            </p>
+            <p class="paragraph">
+              Enter bundlers. Give a bundler a starting file (an entry point)
+              and it will build a dependency graph of the modules and
+              dependencies starting from that file, then combine them into a
+              single output file. Provide multiple entry points and it will do
+              the same for each separately. You can read more about
+              <a
+                href="https://snipcart.com/blog/javascript-module-bundler"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                why we use bundlers and how they work
+              </a>
+              in this short article.
+            </p>
+            <p class="paragraph">
+              Webpack is one such tool for bundling modules. There is a lot of
+              talk across the net about how difficult and complex it is to set
+              up and use, but at the moment our needs are few and the setup is
+              basic enough. In fact, you can see an example of getting it up and
+              running on the
+              <a
+                href="https://webpack.js.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                front page of the Webpack website
+              </a>
+              .
+            </p>
+            <p class="paragraph">
+              Webpack <em>is</em> a very powerful tool, and with that power
+              comes a decent amount of complexity. Don't let it scare you off!
+              The basic configuration is not difficult and proficiency with
+              webpack looks <em>amazing</em> on resumes.
+            </p>
+            <p class="paragraph">
+              To get us started, we are going to refer to the official
+              documentation.
+            </p>
+            <ol>
+              <li>
+                Code along with all of the steps of
+                <a
+                  href="https://webpack.js.org/guides/getting-started/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Webpack's “Getting Started” tutorial
+                </a>
+                .
+              </li>
+            </ol>
+            <p class="paragraph">
+              Let's discuss what's going on there. After installing webpack
+              using npm, we set up a project that required an external library
+              (<a
+                href="https://lodash.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Lodash
+              </a>
+              ) using a <code>&lt;script&gt;</code> tag. The site lists a few
+              reasons why this is probably <em>not</em> ideal and then steps
+              through using webpack to accomplish the same thing.
+            </p>
+            <p class="paragraph">
+              <span id="webpack-knowledge-check"
+                >Let us revisit two key words mentioned earlier -
+                <strong>entry</strong> and <strong>output</strong>. In the above
+                link's example, we rearranged the files into a
+                <code>src</code> and <code>dist</code> folder. Technically, we
+                could have called those folders anything, but those names are
+                typical. <code>src</code> is our <em>source</em> directory. In
+                other words, <code>src</code> is where we write all of the code
+                that webpack is going to bundle up for us. When webpack runs, it
+                goes through all of our files starting at any entry points we
+                give it, looks for any <code>import</code> statements and then
+                compiles <em>all</em> of the code we need to run our site into a
+                single file per entry point inside of the
+                <code>dist</code> folder (short for <em>distribution</em>). In
+                this example, we have a single entry point -
+                <code>/src/index.js</code>. The <strong>output</strong> file is
+                the compiled version - <code>dist/main.js</code>.</span
+              >
+            </p>
+            <ul>
+              <li>
+                Browse
+                <a
+                  href="https://webpack.js.org/concepts/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Webpack's “Concepts” page
+                </a>
+                for more details. We'll talk plugins and loaders in another
+                lesson.
+              </li>
+            </ul>
+          </section>
+          <section data-title="es6-modules-finally">
+            <h3 class="heading" id="es6-modules-finally">
+              <a href="#es6-modules-finally" class="anchor-link">
+                ES6 modules (finally!)
+              </a>
+            </h3>
+            <p class="paragraph">
+              Before ES6, there was no straightforward way to handle multiple
+              JavaScript files for a single page in a browser. Outside of the
+              browser, in a runtime like Node (remember how you used Node to run
+              the Jest tests for the JavaScript exercises back in the
+              Foundations course?), you could use something called
+              <code>CommonJS modules</code> but that was only for Node and not
+              the browser. Fortunately, we now have ES6 modules which work in
+              both (although Node still uses CommonJS by default and you need to
+              do a tiny bit of tweaking to get it to understand ES6 module
+              syntax).
+            </p>
+            <p class="paragraph">
+              Now that we (sorta) understand what webpack is doing, it's time to
+              discuss the syntax for ES6 modules (otherwise known as ESM). There
+              are only 2 components to it - <strong>import</strong> and
+              <strong>export</strong>.
+            </p>
+            <p class="paragraph">
+              The import statement is the same thing that you used during the
+              webpack tutorial so it should be familiar by now.
+            </p>
+            <div class="code-toolbar" bis_skin_checked="1">
+              <pre
+                class="language-javascript line-numbers"
+                tabindex="0"
+              ><code class="language-javascript"><span class="token comment">// a file called functionOne.js</span>
+  <span class="token keyword">const</span> <span class="token function-variable function">functionOne</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'FUNCTION ONE!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword">export</span> <span class="token punctuation">{</span> functionOne <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+              <div class="toolbar" bis_skin_checked="1">
+                <div class="toolbar-item" bis_skin_checked="1">
+                  <button
+                    class="copy-to-clipboard-button"
+                    type="button"
+                    data-copy-state="copy"
+                  >
+                    <span>Copy</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="code-toolbar" bis_skin_checked="1">
+              <pre
+                class="language-javascript line-numbers"
+                tabindex="0"
+              ><code class="language-javascript"><span class="token comment">// another JS file</span>
+  <span class="token keyword">import</span> <span class="token punctuation">{</span> functionOne <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./functionOne'</span><span class="token punctuation">;</span>
+  
+  <span class="token function">functionOne</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// this should work as expected!</span>
+  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+              <div class="toolbar" bis_skin_checked="1">
+                <div class="toolbar-item" bis_skin_checked="1">
+                  <button
+                    class="copy-to-clipboard-button"
+                    type="button"
+                    data-copy-state="copy"
+                  >
+                    <span>Copy</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <p class="paragraph">
+              <span id="module-knowledge-check"
+                >There are <em>many</em> benefits to writing your code in
+                modules. One of the most compelling is code reuse. If, for
+                instance, you have written some functions that manipulate the
+                DOM in a specific way, putting all of those into their own file
+                as a ‘module' means that you can copy that file and reuse it
+                very easily!</span
+              >
+            </p>
+            <p class="paragraph">
+              There are also the same benefits as when using factory functions
+              or the module pattern (the module pattern and ES6 modules are not
+              the same things; this naming convention is frustrating). With the
+              introduction of ES6 Modules, the module pattern (IIFEs) is not
+              needed anymore, though you might still encounter them in the wild.
+              When using ES6 modules, only what is exported can be accessed in
+              other modules by importing. Additionally, any declarations made in
+              a module are not automatically added to the global scope. By using
+              ES6 modules, you can keep different parts of your code cleanly
+              separated, which makes writing and maintaining your code much
+              easier and less error-prone. Keep in mind that you can
+              <em>definitely</em> export constructors, classes and factory
+              functions from your modules.
+            </p>
+            <p class="paragraph">
+              To pull it all together, let's write a module and then include it
+              in our code. We are going to continue from where the webpack
+              tutorial left off. Before beginning, your file directory should
+              look something like this:
+            </p>
+            <pre><code>├── dist
+  │&nbsp;&nbsp; ├── main.js
+  │&nbsp;&nbsp; └── index.html
+  ├── src
+  │&nbsp;&nbsp; └── index.js
+  ├── package-lock.json
+  ├── package.json
+  └── webpack.config.js
+  </code></pre>
+            <p class="paragraph">
+              In addition, you should be able to bundle and run webpack by
+              typing
+              <code>npx webpack</code> in the terminal, (or
+              <code>npm run build</code> if you're using the example project
+              created on the previous section.) .
+            </p>
+            <p class="paragraph">
+              Add a new file to the <code>src</code> directory called
+              <code>myName.js</code> with the following contents:
+            </p>
+            <div class="code-toolbar" bis_skin_checked="1">
+              <pre
+                class="language-javascript line-numbers"
+                tabindex="0"
+              ><code class="language-javascript"><span class="token keyword">const</span> <span class="token function-variable function">myName</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token string">'Hi! My name is '</span> <span class="token operator">+</span> name<span class="token punctuation">;</span>
+  
+  <span class="token keyword">export</span> <span class="token keyword">default</span> myName<span class="token punctuation">;</span>
+  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+              <div class="toolbar" bis_skin_checked="1">
+                <div class="toolbar-item" bis_skin_checked="1">
+                  <button
+                    class="copy-to-clipboard-button"
+                    type="button"
+                    data-copy-state="copy"
+                  >
+                    <span>Copy</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <p class="paragraph">
+              Then, in <code>src/index.js</code>, import and use your new
+              function:
+            </p>
+
+            <div class="code-toolbar" bis_skin_checked="1">
+              <pre
+                class="language-javascript line-numbers"
+                tabindex="0"
+              ><code class="language-javascript"><span class="token comment">// import your function</span>
+  <span class="token keyword">import</span> myName <span class="token keyword">from</span> <span class="token string">'./myName'</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword">function</span> <span class="token function">component</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> element <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+    <span class="token comment">// use your function!</span>
+    element<span class="token punctuation">.</span>textContent <span class="token operator">=</span> <span class="token function">myName</span><span class="token punctuation">(</span><span class="token string">'Cody'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> element<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+  document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span><span class="token function">component</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+              <div class="toolbar" bis_skin_checked="1">
+                <div class="toolbar-item" bis_skin_checked="1">
+                  <button
+                    class="copy-to-clipboard-button"
+                    type="button"
+                    data-copy-state="copy"
+                  >
+                    <span>Copy</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <p class="paragraph">
+              Easy! Now, if you run <code>npx webpack</code> in your project
+              directory, your page should show our new function being used.
+            </p>
+            <p class="paragraph">
+              <span id="exports-knowledge-check"
+                >There are two different ways to use exports in your code: named
+                exports and default exports. Which option you use depends on
+                what you're exporting. Take a moment to look at the
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  MDN documentation about the export declaration
+                </a>
+                and the
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  MDN documentation about the import declaration
+                </a>
+                which give great examples for the different syntax on import and
+                export.
+              </span>
+            </p>
+            <p class="paragraph">
+              Here is an example with named exports, which you will most often
+              use when you have multiple values to export in a module:
+            </p>
+            <div class="code-toolbar" bis_skin_checked="1">
+              <pre
+                class="language-javascript line-numbers"
+                tabindex="0"
+              ><code class="language-javascript"><span class="token comment">// a file called myModule.js</span>
+  <span class="token keyword">const</span> <span class="token function-variable function">functionOne</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token string">'ONE'</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token function-variable function">functionTwo</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token string">'TWO'</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword">export</span> <span class="token punctuation">{</span>
+    functionOne<span class="token punctuation">,</span>
+    functionTwo
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+              <div class="toolbar" bis_skin_checked="1">
+                <div class="toolbar-item" bis_skin_checked="1">
+                  <button
+                    class="copy-to-clipboard-button"
+                    type="button"
+                    data-copy-state="copy"
+                  >
+                    <span>Copy</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <p class="paragraph">And to import them:</p>
+            <div class="code-toolbar" bis_skin_checked="1">
+              <pre
+                class="language-javascript line-numbers"
+                tabindex="0"
+              ><code class="language-javascript"><span class="token comment">// index.js in /src folder</span>
+  <span class="token keyword">import</span> <span class="token punctuation">{</span>functionOne<span class="token punctuation">,</span> functionTwo<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./myModule'</span><span class="token punctuation">;</span>
+  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+              <div class="toolbar" bis_skin_checked="1">
+                <div class="toolbar-item" bis_skin_checked="1">
+                  <button
+                    class="copy-to-clipboard-button"
+                    type="button"
+                    data-copy-state="copy"
+                  >
+                    <span>Copy</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <p class="paragraph">
+              Using this pattern gives you the freedom to only import the
+              functions you need in the various files of your program. So it's
+              perfectly fine to only import <code>functionOne</code> if that's
+              the only one you need.
+            </p>
+          </section>
+          <section data-title="knowledge-check">
+            <h3 class="heading" id="knowledge-check">
+              <a href="#knowledge-check" class="anchor-link">Knowledge check</a>
+            </h3>
+            <p class="paragraph">
+              This section contains questions for you to check your
+              understanding of this lesson. If you're having trouble answering
+              the questions below on your own, review the material above to find
+              the answer.
+            </p>
+            <ul>
+              <li>
+                <a
+                  href="https://peterxjang.com/blog/modern-javascript-explained-for-dinosaurs.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Explain what npm is and where it was commonly used before
+                  being adopted on the frontend.
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://docs.npmjs.com/creating-a-package-json-file"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Describe what <code>npm init</code> does and what
+                  <code>package.json</code> is.
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://docs.npmjs.com/downloading-and-installing-packages-locally"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Know how to install packages using npm.
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://peterxjang.com/blog/modern-javascript-explained-for-dinosaurs.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Describe what a JavaScript module bundler like webpack is.
+                </a>
+              </li>
+              <li>
+                <a href="#webpack-knowledge-check"
+                  >Explain what the concepts “entry” and “output” mean in
+                  relation to webpack.
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://dev.to/moimikey/demystifying-devdependencies-and-dependencies-5ege"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Briefly explain what a development dependency is.
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://peterxjang.com/blog/modern-javascript-explained-for-dinosaurs.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Explain what “transpiling code” means and how it relates to
+                  frontend development.
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://peterxjang.com/blog/modern-javascript-explained-for-dinosaurs.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Briefly describe what a task runner is and how it's used in
+                  frontend development.
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://peterxjang.com/blog/modern-javascript-explained-for-dinosaurs.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Describe how to write an npm automation script.
+                </a>
+              </li>
+              <li>
+                <a href="#module-knowledge-check"
+                  >Explain one of the main benefits of writing code in modules.
+                </a>
+              </li>
+              <li>
+                <a href="#exports-knowledge-check"
+                  >Explain “named exports” and “default exports”.
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section data-title="additional-resources">
+            <h3 class="heading" id="additional-resources">
+              <a href="#additional-resources" class="anchor-link"
+                >Additional resources
+              </a>
+            </h3>
+            <p class="paragraph">
+              This section contains helpful links to other content. It isn't
+              required, so consider it supplemental.
+            </p>
+            <ul>
+              <li>
+                Watch this video about
+                <a
+                  href="https://youtu.be/cRHQNNcYf6s"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >ES6 Modules by Web Dev Simplified
+                </a>
+                if you find video lessons easier to absorb. It covers the same
+                topics as discussed in this lesson.
+              </li>
+              <li>
+                Here is
+                <a
+                  href="https://blog.logrocket.com/commonjs-vs-es-modules-node-js/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  a brief comparison of CommonJS modules and ES6 modules
+                </a>
+                .
+              </li>
+            </ul>
+          </section>
+        </article>
+        <aside>
+          <h4>Lesson contents</h4>
+          <ul>
+            <li>
+              <a href="#introduction"> Introduction </a>
+            </li>
+            <li>
+              <a href="#lesson-overview"> Lesson overview </a>
+            </li>
+            <li>
+              <a href="#the-history-of-javascript">
+                The history of JavaScript
+              </a>
+            </li>
+            <li>
+              <a href="#npm"> npm </a>
+            </li>
+            <li>
+              <a href="#yarn"> Yarn? </a>
+            </li>
+            <li>
+              <a href="#webpack-and-bundlers"> Webpack and bundlers </a>
+            </li>
+            <li>
+              <a href="#es6-modules-finally"> ES6 modules (finally!) </a>
+            </li>
+            <li>
+              <a href="#knowledge-check"> Knowledge check </a>
+            </li>
+            <li>
+              <a href="#additional-resources"> Additional resources </a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </main>
+  </body>
+</html>
