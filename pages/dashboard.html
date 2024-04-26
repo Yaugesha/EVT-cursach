@@ -6,7 +6,42 @@
     <title>Dashboard</title>
   <script defer src="../dashboard.bundle.js"></script></head>
   <body>
-    <header></header>
+    <header class="course-header">
+      <nav class="course-navigation">
+        <ul class="course-navigation__list">
+          <li class="course-navigation__list-item">
+            <a
+              class="course-navigation__navigation-link"
+              href="./dashboard.html"
+            >
+              <img src="../assets/ic-dashboard.f280cad7af41cda91095.svg" alt="" />
+              <span>Dashboard</span></a
+            >
+          </li>
+          <li class="course-navigation__list-item">
+            <a
+              class="course-navigation__navigation-link"
+              href="./schedule.html"
+            >
+              <img src="../assets/ic-calendar.343809af5c679d5482c7.svg" alt="" />
+              <span>Schedule</span></a
+            >
+          </li>
+          <li class="course-navigation__list-item">
+            <a class="course-navigation__navigation-link" href="">
+              <img src="../assets/ic-mic.8d892b1658d18a97d734.svg" alt="" />
+              <span>Interviews</span></a
+            >
+          </li>
+          <li class="course-navigation__list-item">
+            <a class="course-navigation__navigation-link" href="">
+              <img src="../assets/ic-course-stats.2f459a1fc4d9ff494baa.svg" alt="" />
+              <span>Course Statistics</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
     <main>
       <section>
         <div class="dashboard">
@@ -96,7 +131,9 @@
                       </td>
                     </tr>
                     <tr class="tasks-table__task task">
-                      <td class="task__name">Fun Chat</td>
+                      <td class="task__name">
+                        <a href="./exercise.html"> Fun Chat </a>
+                      </td>
                       <td class="task__type">Coding</td>
                       <td class="task__deadline">
                         <div class="deadline">
@@ -112,7 +149,9 @@
                       </td>
                     </tr>
                     <tr class="tasks-table__task task">
-                      <td class="task__name">Fun Chat</td>
+                      <td class="task__name">
+                        <a href="./theory.html"> Fun Chat </a>
+                      </td>
                       <td class="task__type">Coding</td>
                       <td class="task__deadline">
                         <div class="deadline">
@@ -200,5 +239,5 @@
       </section>
     </main>
   </body>
-  <script src="../7a4ff165bd0f932da442.js"></script>
+  <script src="../3246ec2113386ce847c9.js"></script>
 </html>

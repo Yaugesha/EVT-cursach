@@ -8,7 +8,7 @@
   <body>
     <header class="site-header">
       <a class="header-logo" href="">
-        <img sclass="logo__image" src="../assets/logo.a44c6a4833e8fdb4a6fc.png" alt="logo">
+        <img sclass="logo__image" src="../assets/logo.a44c6a4833e8fdb4a6fc.png" alt="logo" />
       </a>
       <div class="burger-menu-icon">
         <span></span>
@@ -17,10 +17,18 @@
       </div>
       <nav>
         <ul class="site-navigation">
-          <li class="navigation__tab_active"><a href="#about">About</a></li>
-          <li class="navigation__tab"><a href="#exercises">Exercises</a></li>
-          <li class="navigation__tab"><a href="#features">Features</a></li>
-          <li class="navigation__tab"><a href="#reviews">Reviews</a></li>
+          <li class="site-navigation__tab_active">
+            <a class="site-navigation__tab-link" href="#about">About</a>
+          </li>
+          <li class="site-navigation__tab">
+            <a class="site-navigation__tab-link" href="#exercises">All paths</a>
+          </li>
+          <li class="site-navigation__tab">
+            <a class="site-navigation__tab-link" href="#features">Community</a>
+          </li>
+          <li class="site-navigation__tab">
+            <a class="site-navigation__tab-link" href="#reviews">Support</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -28,24 +36,29 @@
       <div class="page-header__container">
         <div class="page-header__content">
           <div class="page-header__info">
-            <img src="../assets/ic-js-logo.45b69fc295d3edf2e037.svg" alt="JS">
+            <img src="../assets/ic-js-logo.45b69fc295d3edf2e037.svg" alt="JS" />
             <div class="course-info">
               <span class="course-info__name">JavaScript</span>
               <div class="course-info__stats">
-                <img src="../assets/ic-students.27aad550dc8d19250faf.svg" alt="students">
+                <img src="../assets/ic-students.27aad550dc8d19250faf.svg" alt="students" />
                 <span class="course-info__students">51,407 students</span>
               </div>
             </div>
           </div>
           <nav class="page-header__navigation">
             <ul class="page-header__navigation-list">
-              <li class="page-header__navigation-tab page-header__navigation-tab_active">
+              <li
+                class="page-header__navigation-tab page-header__navigation-tab_active"
+              >
                 <a class="page-header__navigation-tab-content" href="#about">
                   About
                 </a>
               </li>
               <li class="page-header__navigation-tab">
-                <a class="page-header__navigation-tab-content" href="#exercises">
+                <a
+                  class="page-header__navigation-tab-content"
+                  href="#exercises"
+                >
                   Exercises
                 </a>
               </li>
@@ -62,18 +75,23 @@
             </ul>
           </nav>
         </div>
-        <div class="page-header__contributors">
-          <a class="contributors" href="https://github.com" target="_blank">
-            <div class="contributors__faces">
-              <div class="contributors__face contributors__face_first"></div>
-              <div class="contributors__face contributors__face_second"></div>
-              <div class="contributors__face contributors__face_third"></div>
-            </div>
-            <div class="contributors__stats">
-              <span class="contributors__contributors">255 contibutors</span>
-              <span class="contributors__mentors">1313 mentors</span>
-            </div>
-          </a>
+        <div class="page-header__about-course">
+          <div class="page-header__contributors">
+            <a class="contributors" href="https://github.com" target="_blank">
+              <div class="contributors__faces">
+                <div class="contributors__face contributors__face_first"></div>
+                <div class="contributors__face contributors__face_second"></div>
+                <div class="contributors__face contributors__face_third"></div>
+              </div>
+              <div class="contributors__stats">
+                <span class="contributors__contributors">255 contibutors</span>
+                <span class="contributors__mentors">1313 mentors</span>
+              </div>
+            </a>
+          </div>
+          <button class="link-button popup-open-button">
+            Become a student
+          </button>
         </div>
       </div>
     </header>
@@ -94,17 +112,17 @@
               JavaScript is not only used in the browser. JavaScript runtimes,
               such as
               <a href="https://nodejs.org/en/" target="blank" rel="noreferrer"
-                >Node.js
-              </a>
+                >Node.js</a
+              >
               and
               <a href="https://deno.land/" target="blank" rel="noreferrer"
-                >Deno
-              </a>
+                >Deno</a
+              >
               allow you to write, launch and serve requests on webservers. Other
               frameworks, such as
               <a href="https://electronjs.org/" target="blank" rel="noreferrer"
-                >Electron
-              </a>
+                >Electron</a
+              >
               use JavaScript to write cross-platform applications for Windows,
               Linux and macOS. Mobile app development is also a possibility,
               utilising
@@ -113,12 +131,12 @@
                 target="blank"
                 rel="noreferrer"
               >
-                React Native
-              </a>
+                React Native</a
+              >
               and various others, with
               <a href="https://expo.dev/" target="blank" rel="noreferrer">
-                Expo
-              </a>
+                Expo</a
+              >
               now allowing to target Android, iOS and the web, all at once.
             </p>
             <p>
@@ -133,7 +151,7 @@
             </p>
             <blockquote>
               <p>
-                "ECMAScript has grown to be one of the world’s most widely used
+                "ECMAScript has grown to be one of the world's most widely used
                 general-purpose programming languages. It is best known as the
                 language embedded in web browsers but has also been widely
                 adopted for server and embedded applications. —
@@ -141,8 +159,8 @@
                   href="https://262.ecma-international.org/6.0/#sec-ecmascript-overview"
                   target="blank"
                   rel="noreferrer"
-                  >ECMA International Language Specification
-                </a>
+                  >ECMA International Language Specification</a
+                >
               </p>
             </blockquote>
             <p>
@@ -165,7 +183,8 @@
             118 coding exercises for JavaScript course
           </h2>
           <p class="about-exercises__description">
-            Get better at programming through fun, rewarding coding exercises that test your understanding of concepts with OUR COMPANY.
+            Get better at programming through fun, rewarding coding exercises
+            that test your understanding of concepts with ProgForce.
           </p>
         </div>
         <div class="accordion">
@@ -175,84 +194,97 @@
               <span>4 lessons • 8 projects • 4 tests</span>
             </div>
             <span>
-              <a href="">Expand all sections</a>
+              <a class="link popup-open-button">Expand all sections</a>
             </span>
           </div>
           <div class="tab">
-            <input type="radio" id="tab-1" name="tab" />
-            <label class="tab__label" for="tab-1">About</label>
+            <input type="checkbox" id="tab-1" name="tab" />
+            <label class="tab__label" for="tab-1">
+              <div class="tab__info">
+                <span class="tab__number">1</span>
+                <div class="tab__describtion">
+                  <h4 class="tab__name">Introduction</h4>
+                  <p class="tab__short-describtion">
+                    In this course, you will learn about JavaScript data types,
+                    built-in methods, and variables.
+                  </p>
+                </div>
+              </div>
+            </label>
             <div class="tab__content">
-              JavaScript is a programming language that allows web pages to be
-              dynamic. It is an interpreted language, which means that it
-              doesn't need to be compiled: instead the interpreter (such as a
-              web browser) will parse the code and turn it into code that their
-              machine can run - suitable for creating dynamic websites that can
-              run on any browser!
+              <img
+                class="img"
+                src="../assets/ic-opened-step.c73268968dd2dc2e6c8c.svg"
+                alt=""
+              />
+              <span>Lecture</span>
+              <p>
+                In this course, you will learn about JavaScript data types,
+                built-in methods, and variables.
+              </p>
             </div>
           </div>
           <div class="tab">
-            <input type="radio" id="tab-2" name="tab" />
-            <label class="tab__label" for="tab-2">About</label>
+            <input type="checkbox" id="tab-2" name="tab" />
+            <label class="tab__label" for="tab-2">
+              <div class="tab__info">
+                <span class="tab__number">2</span>
+                <div class="tab__describtion">
+                  <h4 class="tab__name">Introduction</h4>
+                  <p class="tab__short-describtion">
+                    In this course, you will learn about JavaScript data types,
+                    built-in methods, and variables.
+                  </p>
+                </div>
+              </div>
+            </label>
             <div class="tab__content">
-              JavaScript is a programming language that allows web pages to be
-              dynamic. It is an interpreted language, which means that it
-              doesn't need to be compiled: instead the interpreter (such as a
-              web browser) will parse the code and turn it into code that their
-              machine can run - suitable for creating dynamic websites that can
-              run on any browser!
+              <img
+                class="img"
+                src="../assets/ic-opened-step.c73268968dd2dc2e6c8c.svg"
+                alt=""
+              />
+              <span>Lecture</span>
+              <p>
+                In this course, you will learn about JavaScript data types,
+                built-in methods, and variables.
+              </p>
             </div>
-          </div>
-          <div class="tab">
-            <input type="radio" id="tab-3" name="tab" />
-            <label class="tab__label" for="tab-3">About</label>
             <div class="tab__content">
-              JavaScript is a programming language that allows web pages to be
-              dynamic. It is an interpreted language, which means that it
-              doesn't need to be compiled: instead the interpreter (such as a
-              web browser) will parse the code and turn it into code that their
-              machine can run - suitable for creating dynamic websites that can
-              run on any browser!
+              <img
+                class="img"
+                src="../assets/ic-opened-step.c73268968dd2dc2e6c8c.svg"
+                alt=""
+              />
+              <span>Lecture</span>
+              <p>
+                In this course, you will learn about JavaScript data types,
+                built-in methods, and variables.
+              </p>
             </div>
-          </div>
-          <div class="tab">
-            <input type="radio" id="tab-4" name="tab" />
-            <label class="tab__label" for="tab-4">About</label>
             <div class="tab__content">
-              JavaScript is a programming language that allows web pages to be
-              dynamic. It is an interpreted language, which means that it
-              doesn't need to be compiled: instead the interpreter (such as a
-              web browser) will parse the code and turn it into code that their
-              machine can run - suitable for creating dynamic websites that can
-              run on any browser!
-            </div>
-          </div>
-          <div class="tab">
-            <input type="radio" id="tab-5" name="tab" />
-            <label class="tab__label" for="tab-5">About</label>
-            <div class="tab__content">
-              JavaScript is a programming language that allows web pages to be
-              dynamic. It is an interpreted language, which means that it
-              doesn't need to be compiled: instead the interpreter (such as a
-              web browser) will parse the code and turn it into code that their
-              machine can run - suitable for creating dynamic websites that can
-              run on any browser!
+              <img
+                class="img"
+                src="../assets/ic-opened-step.c73268968dd2dc2e6c8c.svg"
+                alt=""
+              />
+              <span>Lecture</span>
+              <p>
+                In this course, you will learn about JavaScript data types,
+                built-in methods, and variables.
+              </p>
             </div>
           </div>
         </div>
       </section>
       <section id="features">
-          <h2>
-            Key features of JavaScript
-          </h2>
+        <h2>Key features of JavaScript</h2>
         <div class="features">
           <div class="logo">
-            <img src="../assets/ic-js-logo-blur.f9a40da6753f0da1bed1.svg" alt="JS">
+            <img src="../assets/ic-js-logo-blur.f9a40da6753f0da1bed1.svg" alt="JS" />
           </div>
           <div class="feature" id="feature-1">
-            <img
-              src="../assets/ic-cross-platform.74189e35acf0b66b9e18.svg"
-              alt=""
-            />
+            <img src="../assets/ic-cross-platform.ab402fcf6701764548d6.svg" alt="" />
             <h3>Runs almost everywhere</h3>
             <p>
               Build web-pages, write backend, create database scripts, make
@@ -260,10 +292,7 @@
             </p>
           </div>
           <div class="feature" id="feature-2">
-            <img
-              src="../assets/ic-multi-paradigm.345b8b90483ca6bb9de3.svg"
-              alt=""
-            />
+            <img src="../assets/ic-multi-paradigm.db6e24e78e48719017a0.svg" alt="" />
             <h3>Use any programming style</h3>
             <p>
               Use prototype-based, object-oriented, functional, or declarative
@@ -271,10 +300,7 @@
             </p>
           </div>
           <div class="feature" id="feature-3">
-            <img
-              src="../assets/ic-dynamically-typed.1acb6f2a3106688214a7.svg"
-              alt=""
-            />
+            <img src="../assets/ic-dynamically-typed.05c3307270c6a222cc5b.svg" alt="" />
             <h3>No types required</h3>
             <p>
               Dynamically and weakly typed by default, gain typed confidence
@@ -282,34 +308,27 @@
             </p>
           </div>
           <div class="feature" id="feature-4">
-            <img
-              src="../assets/ic-tooling.9f9857104b4c648ab71b.svg"
-              alt=""
-            />
-            <h3>Largest package registry
-            </h3>
+            <img src="../assets/ic-tooling.ac2bf1d480a517d7c8ae.svg" alt="" />
+            <h3>Largest package registry</h3>
             <p>
-              No need to reinvent the wheel. Build on top of > 1.3 million packages (April, 2020).
+              No need to reinvent the wheel. Build on top of > 1.3 million
+              packages (April, 2020).
             </p>
           </div>
           <div class="feature" id="feature-5">
-            <img
-              src="../assets/ic-community.8d1efda3765e03c8ebc3.svg"
-              alt=""
-            />
+            <img src="../assets/ic-community.f4fdee2594dc1031439e.svg" alt="" />
             <h3>Designed by a committee</h3>
             <p>
-              Frequent updates, following ECMAScript, a general purpose, cross platform, vendor-neutral standard.
+              Frequent updates, following ECMAScript, a general purpose, cross
+              platform, vendor-neutral standard.
             </p>
           </div>
           <div class="feature" id="feature-6">
-            <img
-              src="../assets/ic-concurrency.bbb54ea3412044532d43.svg"
-              alt=""
-            />
+            <img src="../assets/ic-concurrency.92b55508e6852c7e6c29.svg" alt="" />
             <h3>Concurrency is safe</h3>
             <p>
-              Async/await, dedicated workers, or state sync in shared workers. No deadlocks or race conditions.
+              Async/await, dedicated workers, or state sync in shared workers.
+              No deadlocks or race conditions.
             </p>
           </div>
         </div>
@@ -533,6 +552,42 @@
           </div>
         </div>
       </section>
+      <section id="form" class="popup">
+        <form class="form" action="../pages/dashboard.html">
+          <a class="form__header" href="../pages/main.html">
+            <img src="../assets/logo.a44c6a4833e8fdb4a6fc.png" alt="logo" />
+          </a>
+          <button class="form__oauth oauth popup-close-button">
+            <span class="oauth__text">Sign in with github</span>
+            <img
+              class="oauth__logo"
+              src="../assets/ic-github-logo.5a470bdcb463ff6fb7b3.svg"
+              alt="github"
+            />
+          </button>
+          <span class="form__devidor">OR</span>
+          <div class="form__inputs">
+            <div class="input-container">
+              <div class="label-image-container">
+                <img src="../assets/ic-trophy.09d16bca1f5f1f69dcdf.svg" alt="" />
+              </div>
+              <input type="text" placeholder="email" />
+            </div>
+            <div class="input-container">
+              <div class="label-image-container">
+                <img src="../assets/ic-flame.9d3067e6299f6802b5fd.svg" alt="" />
+              </div>
+              <input type="password" placeholder="password" />
+            </div>
+          </div>
+          <a class="form__forgot-password popup-close-button" href="">
+            Forgot password?
+          </a>
+          <button type="submit" class="form__action-button popup-close-button">
+            Sign in
+          </button>
+        </form>
+      </section>
     </main>
     <footer>
       <div class="footer">
@@ -547,10 +602,7 @@
               src="../assets/ic-telega-logo.9d32b9530d7de8f23f44.svg"
               alt="telegram"
             />
-            <img
-              src="../assets/ic-github-logo.5a470bdcb463ff6fb7b3.svg"
-              alt="github"
-            />
+            <img src="../assets/ic-github-logo.5a470bdcb463ff6fb7b3.svg" alt="github" />
             <img
               src="../assets/ic-discord-logo.d96b5079e87a443d825a.svg"
               alt="discord"
@@ -559,7 +611,7 @@
         </div>
         <div class="footer__navigation">
           <div>
-            <h3>About<h3>
+            <h3>About</h3>
             <ul>
               <li>About</li>
               <li>Team</li>
@@ -568,7 +620,7 @@
             </ul>
           </div>
           <div>
-            <h3>Support<h3>
+            <h3>Support</h3>
             <ul>
               <li>FAQ</li>
               <li>Contribute</li>
@@ -576,14 +628,14 @@
             </ul>
           </div>
           <div>
-            <h3>Buides<h3>
+            <h3>Guides</h3>
             <ul>
               <li>Community guides</li>
               <li>Instalation guides</li>
             </ul>
           </div>
           <div>
-            <h3>Legal<h3>
+            <h3>Legal</h3>
             <ul>
               <li>Terms</li>
               <li>Privacy</li>
@@ -591,8 +643,10 @@
           </div>
         </div>
       </div>
-      <div class="footer__copirate">© 2024 Code trainer. All rights reserved.</div>
+      <div class="footer__copirate">
+        © 2024 Code trainer. All rights reserved.
+      </div>
     </footer>
-    <script src="../32024911040c7643f6e0.js"></script>
+    <script src="../be73a7fc550e850853fc.js"></script>
   </body>
 </html>

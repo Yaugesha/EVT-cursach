@@ -6,8 +6,94 @@
     <title>Schdule</title>
   <script defer src="../schedule.bundle.js"></script></head>
   <body>
+    <header class="course-header">
+      <nav class="course-navigation">
+        <ul class="course-navigation__list">
+          <li class="course-navigation__list-item">
+            <a
+              class="course-navigation__navigation-link"
+              href="./dashboard.html"
+            >
+              <img src="../assets/ic-dashboard.f280cad7af41cda91095.svg" alt="" />
+              <span>Dashboard</span></a
+            >
+          </li>
+          <li class="course-navigation__list-item">
+            <a
+              class="course-navigation__navigation-link"
+              href="./schedule.html"
+            >
+              <img src="../assets/ic-calendar.343809af5c679d5482c7.svg" alt="" />
+              <span>Schedule</span></a
+            >
+          </li>
+          <li class="course-navigation__list-item">
+            <a class="course-navigation__navigation-link" href="">
+              <img src="../assets/ic-mic.8d892b1658d18a97d734.svg" alt="" />
+              <span>Interviews</span></a
+            >
+          </li>
+          <li class="course-navigation__list-item">
+            <a class="course-navigation__navigation-link" href="">
+              <img src="../assets/ic-course-stats.2f459a1fc4d9ff494baa.svg" alt="" />
+              <span>Course Statistics</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
     <main>
-      <div class="table-container">
+      <section class="table-sort">
+        <div class="table-sort__tabs">
+          <div class="table-sort__tab">
+            <span class="table-sort__tab-name">All</span>
+            <span class="table-sort__tab-data">99+</span>
+          </div>
+          <div class="table-sort__tab">
+            <span class="table-sort__tab-name">Avilable</span>
+            <span class="table-sort__tab-data">15</span>
+          </div>
+          <div class="table-sort__tab">
+            <span class="table-sort__tab-name">Review</span>
+            <!-- <span class="table-sort__tab-data">99+</span> -->
+          </div>
+          <div class="table-sort__tab">
+            <span class="table-sort__tab-name">Feauture</span>
+            <span class="table-sort__tab-data">80</span>
+          </div>
+          <div class="table-sort__tab">
+            <span class="table-sort__tab-name">Missed</span>
+            <span class="table-sort__tab-data">4</span>
+          </div>
+          <div class="table-sort__tab">
+            <span class="table-sort__tab-name">Done</span>
+            <span class="table-sort__tab-data">20</span>
+          </div>
+          <div class="table-sort__tab">
+            <span class="table-sort__tab-name">Archived</span>
+            <span class="table-sort__tab-data">24</span>
+          </div>
+        </div>
+        <div class="table-sort__extrab-tabs">
+          <button class="table-sort__extrab-tab unstyled-button">
+            <img
+              class="table-sort__extrab-tab-img"
+              src="../assets/ic-settings.9357718e519245a18e08.svg"
+              alt=""
+            />
+            <span src="table-sort__extrab-tab-name">Settings</span>
+          </button>
+          <button class="table-sort__extrab-tab unstyled-button">
+            <span src="table-sort__extrab-tab-name">More</span>
+            <img
+              class="table-sort__extrab-tab-img"
+              src="../assets/ic-chevron-down.98e7859e5636ee17e2ac.svg"
+              alt=""
+            />
+          </button>
+        </div>
+      </section>
+      <section class="table-container">
         <table class="schdule-table">
           <thead class="schdule-table__head table-head">
             <tr class="schdule-table__head-row table-head__row">
@@ -148,8 +234,8 @@
             </tr>
           </tbody>
         </table>
-      </div>
+      </section>
     </main>
   </body>
-  <script src="../17d10e0f8e772fa8ddd1.js"></script>
+  <script src="../922e0c2b961e9a5c5afb.js"></script>
 </html>
