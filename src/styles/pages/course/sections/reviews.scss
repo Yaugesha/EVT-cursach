@@ -49,25 +49,25 @@
   background: $gold;
 
   &[star="5"] {
-    width: 28%;
+    width: 65%;
   }
   &[star="4"] {
-    width: 35%;
+    width: 23%;
   }
   &[star="3"] {
-    width: 28%;
+    width: 7%;
   }
   &[star="2"] {
-    width: 6%;
+    width: 2%;
   }
   &[star="1"] {
-    width: 3%;
+    width: 2%;
   }
 }
 
 .reviews-container {
   position: relative;
-  @include size(100%, 424px);
+  @include size(100%, 444px);
   overflow-x: hidden;
 
   padding-top: 8px;
@@ -104,13 +104,11 @@
 
 .review {
   @include border(1px, $grey-300, 16px);
+  @include flex(start, space-between, column);
+  gap: 16px;
   line-height: 1.5;
   width: 214px;
   padding: 48px 32px 24px 16px;
 
   @include shadow();
-
-  &__reviewer-name {
-    margin-top: 16px;
-  }
 }
