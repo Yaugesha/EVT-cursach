@@ -76,8 +76,8 @@
   background: $background;
 }
 
-@mixin link() {
-  color: $link;
+@mixin link($color: $link) {
+  color: $color;
   text-decoration: underline;
 }
 
@@ -102,4 +102,12 @@
   content: "";
   background-color: $link;
   transition: width 0.3s ease;
+}
+
+@mixin task-type($color) {
+  @include border(1px, $color, 4px);
+  @include font(14px, 300, 1.5);
+  padding: 0px 8px;
+  background-color: rgba($color, 0.063);
+  color: $color;
 }

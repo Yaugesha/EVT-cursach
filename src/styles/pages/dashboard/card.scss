@@ -1,13 +1,14 @@
 @import "../../utilities/mixins.scss";
 
 .dashboard-card {
-  @include border(1px, #000, 8px);
+  @include border(1px, $grey-300, 8px);
+  @include shadow();
 
   &__head {
     @include flex($content: space-between);
     @include font($weight: 600, $line-h: 56px);
     padding: 0px 24px;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid $grey-200;
   }
 
   &__body {
@@ -17,7 +18,7 @@
 
   &__footer {
     @include flex();
-    border-top: 1px solid #000;
+    border-top: 1px solid $grey-200;
     padding: 16px;
   }
 }
@@ -40,6 +41,21 @@
   }
 }
 
+.submit-button {
+  @include button((4px 16px), space-between, $background: $link-button);
+  @include font(16px, 400, 120%, $white);
+  justify-content: center;
+  border-radius: 6px;
+
+  &:hover {
+    background-color: $link-button-hover;
+  }
+
+  &:active {
+    background-color: $link-button-active;
+  }
+}
+
 .tasks-table {
   width: 100%;
 }
@@ -49,25 +65,43 @@
   height: 50px;
   padding: 12px 8px;
 
-  &:not(&:last-of-type) {
-    border-bottom: 1px solid #000;
+  &:hover {
+    background-color: $grey-100;
   }
+
+  &:not(&:last-of-type) {
+    border-bottom: 1px solid $grey-200;
+  }
+
   &__name {
     word-break: break-word;
     font-size: 14px;
-    color: cornflowerblue;
+
+    a {
+      display: block;
+      color: $blue-500;
+      width: 90px;
+      transition: all 0.4s;
+
+      &:hover {
+        color: $blue-600;
+      }
+    }
   }
 
   &__type {
-    @include border(1px, rgb(114, 46, 209), 4px);
-    @include font(14px, 300, 1.5);
-    padding: 0px 8px;
-    background-color: rgba(114, 46, 209, 0.063);
-    color: rgb(114, 46, 209);
-  }
-
-  &__deadline {
-    // @include flex($content: end, $flow: column);
+    &[type="coding"] {
+      @include task-type($coding);
+    }
+    &[type="theory"] {
+      @include task-type($theory);
+    }
+    &[type="test"] {
+      @include task-type($test);
+    }
+    &[type="lecture"] {
+      @include task-type($lecture);
+    }
   }
 
   .deadline {
@@ -78,10 +112,16 @@
       @include flex(center);
       gap: 4px;
       @include font(14px, 300, 1.5);
+      filter: opacity(0.5);
     }
 
     &__data {
       @include font(14px, 400, 1.5);
+
+      &_coming {
+        @include font(14px, 400, 1.5);
+        color: $test;
+      }
     }
   }
 }
@@ -100,8 +140,12 @@
 .note {
   @include flex(top);
   gap: 4px;
-  @include font(14px, 400, 1.15);
+  @include font(14px, 400, 1.5);
   padding: 8px 4px;
+
+  &__annotation {
+    color: $grey-600;
+  }
 }
 
 .repository {
@@ -110,6 +154,43 @@
 
   &__link {
     @include flex();
+    color: $blue-500;
     gap: 4px;
+
+    &:hover {
+      color: $blue-600;
+    }
+  }
+}
+
+.tasks {
+  &-heading {
+    @include font($weight: 600, $line-h: 56px);
+  }
+
+  &-link {
+    @include font(14px, 400);
+    @include link($blue-500);
+    text-decoration: none;
+    transition: all 0.4s;
+  }
+}
+
+.fix-repo {
+  @include flex($content: center);
+  gap: 8px;
+  background-color: $button;
+  @include font(14px, 400, 120%);
+  padding: 4px 16px;
+  @include border(1px, $grey-500, 6px);
+  transition: all 0.4s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $button-hover;
+  }
+
+  &:active {
+    background-color: $button-active;
   }
 }

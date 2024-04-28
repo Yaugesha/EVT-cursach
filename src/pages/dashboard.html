@@ -55,16 +55,16 @@
                 <div class="stat">
                   <div class="stat__label">
                     <img src="../public/svg/dashboard/ic-trophy.svg" alt="" />
-                    <span>Position</span>
+                    <span>Complited</span>
                   </div>
-                  <div class="stat__data">2969 / 558</div>
+                  <div class="stat__data">10 / 37</div>
                 </div>
                 <div class="stat">
                   <div class="stat__label">
                     <img src="../public/svg/dashboard/ic-flame.svg" alt="" />
                     <span>Total Score</span>
                   </div>
-                  <div class="stat__data">20 / 3198</div>
+                  <div class="stat__data">200 / 1020</div>
                 </div>
               </div>
             </div>
@@ -84,7 +84,36 @@
           <div class="dashboard-column">
             <div class="dashboard-card">
               <div class="dashboard-card__head">Tasks Statistics</div>
-              <div class="dashboard-card__body"></div>
+              <div class="dashboard-card__body">
+                <div class="ring">
+                  <svg
+                    class="chart"
+                    width="220"
+                    height="220"
+                    viewBox="0 0 37 37"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                    <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                    <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                    <circle class="unit" r="15.9" cx="50%" cy="50%"></circle>
+                    <text x="35%" y="54%" class="text">Tasks: 37</text>
+                  </svg>
+                  <div class="legend">
+                    <p class="legend__title"></p>
+                    <ul class="caption__list">
+                      <li class="caption__item" data-name="Missed">Missed 1</li>
+                      <li class="caption__item" data-name="Done">Done 10</li>
+                      <li class="caption__item" data-name="Available">
+                        Available 6
+                      </li>
+                      <li class="caption__item" data-name="Future">
+                        Future 20
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="dashboard-card">
               <div class="dashboard-card__head">Mentor's check</div>
@@ -97,15 +126,15 @@
                     they have the time and desire
                   </p>
                 </div>
-                <button>Submit task</button>
+                <button class="submit-button">Submit task</button>
               </div>
             </div>
           </div>
           <div class="dashboard-column">
             <div class="dashboard-card">
               <div class="dashboard-card__head">
-                <span>Available Tasks</span>
-                <a href="">View all</a>
+                <span class="tasks-heading">Available Tasks</span>
+                <a class="tasks-link" href="./schedule.html">View all</a>
               </div>
               <div class="dashboard-card__body">
                 <table class="tasks-table">
@@ -116,7 +145,47 @@
                           Fun Chat
                         </a>
                       </td>
-                      <td class="task__type">Coding</td>
+                      <td class="task__type" type="coding">Coding</td>
+                      <td class="task__deadline">
+                        <div class="deadline">
+                          <span class="deadline__head">
+                            <img
+                              src="../public/svg/dashboard/ic-calendar.svg"
+                              alt=""
+                            />
+                            <span>Due by:</span>
+                          </span>
+                          <span class="deadline__data_coming"
+                            >Apr 23 02:59</span
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="tasks-table__task task">
+                      <td class="task__name">
+                        <a href="./exercise.html">Word count</a>
+                      </td>
+                      <td class="task__type" type="coding">Coding</td>
+                      <td class="task__deadline">
+                        <div class="deadline">
+                          <span class="deadline__head">
+                            <img
+                              src="../public/svg/dashboard/ic-calendar.svg"
+                              alt=""
+                            />
+                            <span>Due by:</span>
+                          </span>
+                          <span class="deadline__data_coming"
+                            >Apr 23 02:59</span
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="tasks-table__task task">
+                      <td class="task__name">
+                        <a href="./theory.html">Modules</a>
+                      </td>
+                      <td class="task__type" type="theory">Theory</td>
                       <td class="task__deadline">
                         <div class="deadline">
                           <span class="deadline__head">
@@ -132,9 +201,9 @@
                     </tr>
                     <tr class="tasks-table__task task">
                       <td class="task__name">
-                        <a href="./exercise.html"> Fun Chat </a>
+                        <a href="./exercise.html">Training Days</a>
                       </td>
-                      <td class="task__type">Coding</td>
+                      <td class="task__type" type="coding">Coding</td>
                       <td class="task__deadline">
                         <div class="deadline">
                           <span class="deadline__head">
@@ -150,9 +219,9 @@
                     </tr>
                     <tr class="tasks-table__task task">
                       <td class="task__name">
-                        <a href="./theory.html"> Fun Chat </a>
+                        <a href="./theory.html">Arrays</a>
                       </td>
-                      <td class="task__type">Coding</td>
+                      <td class="task__type" type="theory">Theory</td>
                       <td class="task__deadline">
                         <div class="deadline">
                           <span class="deadline__head">
@@ -167,40 +236,8 @@
                       </td>
                     </tr>
                     <tr class="tasks-table__task task">
-                      <td class="task__name">Fun Chat</td>
-                      <td class="task__type">Coding</td>
-                      <td class="task__deadline">
-                        <div class="deadline">
-                          <span class="deadline__head">
-                            <img
-                              src="../public/svg/dashboard/ic-calendar.svg"
-                              alt=""
-                            />
-                            <span>Due by:</span>
-                          </span>
-                          <span class="deadline__data">Apr 23 02:59</span>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="tasks-table__task task">
-                      <td class="task__name">Fun Chat</td>
-                      <td class="task__type">Coding</td>
-                      <td class="task__deadline">
-                        <div class="deadline">
-                          <span class="deadline__head">
-                            <img
-                              src="../public/svg/dashboard/ic-calendar.svg"
-                              alt=""
-                            />
-                            <span>Due by:</span>
-                          </span>
-                          <span class="deadline__data">Apr 23 02:59</span>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr class="tasks-table__task task">
-                      <td class="task__name">Fun Chat</td>
-                      <td class="task__type">Coding</td>
+                      <td class="task__name"><a href="">Scope</a></td>
+                      <td class="task__type" type="test">Test</td>
                       <td class="task__deadline">
                         <div class="deadline">
                           <span class="deadline__head">
@@ -230,7 +267,7 @@
                     />
                     yaugesha-JSFE2023Q4
                   </a>
-                  <button>Fix repository</button>
+                  <button class="fix-repo">Fix repository</button>
                 </div>
               </div>
             </div>
