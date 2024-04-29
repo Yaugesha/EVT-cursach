@@ -28,9 +28,13 @@ aside {
 
     li {
       margin: 0px;
-      border-left: 2px solid gray;
+      border-left: 2px solid $grey-300;
       padding: 8px;
       padding-left: 16px;
+
+      &.current {
+        border-left: 2px solid $gold;
+      }
     }
   }
 }
@@ -69,16 +73,65 @@ ol {
 li {
   padding-left: 6px;
   @include margin-y(8px);
+
+  a {
+    color: $link;
+  }
 }
 
 .paragraph,
 li,
 a {
   code {
-    @include font(14);
-    color: #be185d;
-    padding: 4px;
+    @include font(16px);
+    background-color: #0f766e29;
+    color: $link-button;
+    white-space: nowrap;
     border-radius: 5px;
-    background-color: rgb(243 244 246);
+    padding: 4px;
+  }
+}
+
+a {
+  &:not(.anchor-link, aside a) {
+    @include link($blue-600);
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+pre {
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 20px;
+
+  code {
+    @include font(18px, 400, 160%);
+  }
+}
+
+.code-toolbar {
+  position: relative;
+
+  &:first-of-type {
+    margin-bottom: 20px;
+  }
+
+  .toolbar-item {
+    @include position(absolute, $t: 8px, $r: 8px);
+
+    button {
+      background-color: $link-button;
+      color: $white;
+      padding: 4px 8px;
+      @include border-only-radius(12px);
+      cursor: pointer;
+
+      &:hover {
+        background-color: $link-button-hover;
+      }
+    }
   }
 }
