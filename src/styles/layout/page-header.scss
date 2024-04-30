@@ -6,8 +6,7 @@
   padding: 20px 24px;
 
   &__container {
-    display: flex;
-    align-items: center;
+    @include flex($items: center);
     max-width: 1440px;
   }
 
@@ -135,3 +134,5 @@
     }
   }
 }
+
+@import "../responisive/page-header.scss";

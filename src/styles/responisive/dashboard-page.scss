@@ -1,0 +1,87 @@
+@media (max-width: 1180px) {
+  .dashboard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 24px;
+    margin-bottom: 32px;
+
+    &-card {
+      &:not(&:nth-of-type(2n + 4)) {
+        position: static;
+      }
+
+      &:nth-of-type(2) {
+        height: 325px;
+      }
+
+      &:nth-of-type(4) {
+        position: relative;
+        height: 295px;
+        top: -29px;
+      }
+
+      &:nth-of-type(6) {
+        position: relative;
+        top: -29px;
+      }
+    }
+  }
+
+  .tasks-table__task {
+    gap: 16px;
+
+    &:nth-of-type(1n + 5) {
+      display: none;
+    }
+
+    &:nth-of-type(4) {
+      border-bottom: none !important;
+    }
+
+    .deadline {
+      flex-flow: row wrap;
+    }
+  }
+}
+
+@media (max-width: 852px) {
+  .dashboard-card:nth-of-type(6) {
+    top: -122px;
+  }
+}
+
+@media (max-width: 833px) {
+  .dashboard {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+
+    &-card {
+      position: static !important;
+
+      &:nth-of-type(4) {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .course-header {
+    justify-content: end;
+  }
+
+  .dashboard-card {
+    height: auto !important;
+  }
+}
+
+.chart {
+  @media (max-width: 833px) {
+    max-width: 200px;
+  }
+  @media (max-width: 408px) {
+    max-width: 166px;
+  }
+}

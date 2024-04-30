@@ -143,3 +143,7 @@ code {
   cursor: pointer;
   outline: inherit;
 }
+
+.lock {
+  overflow: hidden;
+}

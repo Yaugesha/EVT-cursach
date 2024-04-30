@@ -62,7 +62,6 @@
 
 .task {
   @include flex($content: space-between);
-  height: 50px;
   padding: 12px 8px;
 
   &:hover {

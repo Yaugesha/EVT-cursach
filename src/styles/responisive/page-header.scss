@@ -1,0 +1,13 @@
+@media (max-width: 768px) {
+  .page-header {
+    &__container {
+      flex-flow: wrap;
+    }
+
+    .course-info {
+      &__stats {
+        display: none;
+      }
+    }
+  }
+}

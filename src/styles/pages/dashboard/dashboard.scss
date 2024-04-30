@@ -9,9 +9,31 @@
   padding: 0 24px;
   margin: 0 auto;
 
-  &-column {
-    @include flex($items: stretch, $flow: column);
-    gap: 24px;
-    width: 100%;
+  &-card {
+    &:nth-of-type(1) {
+      height: 354px;
+    }
+
+    &:nth-of-type(2) {
+      height: 325px;
+    }
+
+    &:nth-of-type(4) {
+      position: relative;
+      top: -184px;
+    }
+
+    &:nth-of-type(5) {
+      position: relative;
+      top: -213px;
+      height: fit-content;
+    }
+
+    &:nth-of-type(6) {
+      height: fit-content;
+    }
   }
 }
+
+@import "../../responisive/site-header.scss";
+@import "../../responisive/dashboard-page.scss";

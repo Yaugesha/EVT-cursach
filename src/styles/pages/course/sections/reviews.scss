@@ -40,7 +40,7 @@
 .stat__scale {
   @include border(0.0625rem, #000, 5rem);
   background-color: #fff;
-  @include size(338px, 0.5rem);
+  @include size(216px, 0.5rem);
 }
 
 .stat__scale-value {

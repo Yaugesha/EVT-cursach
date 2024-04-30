@@ -1,0 +1,10 @@
+@media (max-width: 768px) {
+  footer {
+    padding: 48px 12px 32px;
+  }
+
+  .footer {
+    grid-template-columns: none;
+    grid-template-rows: repeat(2, 1fr);
+  }
+}

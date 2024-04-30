@@ -1,0 +1,46 @@
+@media (max-width: 986px) {
+  #about,
+  #exercises,
+  #reviews,
+  #features {
+    padding: 24px 12px 64px;
+  }
+
+  #about {
+    flex-flow: column;
+
+    .js-code-example {
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .drop-down-button {
+      margin-bottom: 16px;
+    }
+  }
+
+  #exercises {
+    .accordion {
+      .tab__content {
+        grid-template-columns: 32px 80px 1fr;
+      }
+    }
+  }
+
+  #features {
+    .logo {
+      display: none;
+    }
+
+    .features {
+      @include flex(start, start, column);
+      gap: 20px;
+      height: auto;
+    }
+
+    .feature {
+      position: static;
+      width: 100%;
+    }
+  }
+}
