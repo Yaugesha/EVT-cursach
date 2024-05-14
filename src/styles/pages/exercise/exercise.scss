@@ -2,17 +2,27 @@
 
 main {
   @include flex(start, center);
-  gap: 32px;
   padding: 0px 8px;
+  max-width: 1392px;
+  margin: 0 auto;
 }
 
 .exercise,
 .goals,
 .solution {
-  max-width: 768px;
   padding: 20px;
   margin-bottom: 32px;
   @include border($color: #000, $radius: 8px);
+}
+
+.solution {
+  width: 40%;
+  margin-right: 32px;
+}
+
+.goals,
+.exercise {
+  max-width: 768px;
 }
 
 .theory,
@@ -114,10 +124,6 @@ main {
   }
 }
 
-.solution {
-  max-width: 550px;
-}
-
 .step {
   position: relative;
   padding-left: 24px;
@@ -208,19 +214,21 @@ main {
 
   .task-link {
     @include flex();
-    gap: 16px;
     font-family: "Code" monospace;
     @include font(14px, 400, 130%);
     padding: 12px 20px;
     @include border(1px, #000, 5px);
     cursor: pointer;
+    text-align: left;
 
     &__command {
+      flex-grow: 1;
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
     }
     &__copy {
+      margin-left: 16px;
       @include size(24px);
     }
   }
@@ -269,3 +277,5 @@ main {
     }
   }
 }
+
+@import "../../responisive/exercise.scss"

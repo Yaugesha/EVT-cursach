@@ -1,0 +1,14 @@
+@media (max-width: 1028px) {
+  main {
+    flex-flow: column;
+
+    .solution, .goals, .exercise {
+      width: calc(100vw - 57px);
+      max-width: 100%;
+    }
+
+    .solution {
+      margin-right: 0px;
+    }
+  }
+}
