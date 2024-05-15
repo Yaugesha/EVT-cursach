@@ -6,6 +6,74 @@
     <title>Exercise</title>
   <script defer src="../exercise.bundle.js"></script></head>
   <body>
+    <header class="course-header site-header">
+      <a class="header-logo" href="./course-description.html">
+        <img class="logo__image" src="../assets/logo.a44c6a4833e8fdb4a6fc.png" alt="logo" />
+      </a>
+      <nav class="course-navigation">
+        <ul class="course-navigation__list">
+          <li class="course-navigation__list-item">
+            <a
+              class="course-navigation__navigation-link menu-link"
+              href="./dashboard.html"
+            >
+              <img
+                class="img"
+                src="../assets/ic-dashboard.f280cad7af41cda91095.svg"
+                alt=""
+              />
+              <span>Dashboard</span></a
+            >
+          </li>
+          <li class="course-navigation__list-item">
+            <a
+              class="course-navigation__navigation-link menu-link"
+              href="./schedule.html"
+            >
+              <img
+                class="img"
+                src="../assets/ic-calendar.343809af5c679d5482c7.svg"
+                alt=""
+              />
+              <span>Schedule</span></a
+            >
+          </li>
+          <li class="course-navigation__list-item">
+            <a class="course-navigation__navigation-link menu-link" href="">
+              <img class="img" src="../assets/ic-mic.8d892b1658d18a97d734.svg" alt="" />
+              <span>Interviews</span></a
+            >
+          </li>
+          <li class="course-navigation__list-item">
+            <a class="course-navigation__navigation-link menu-link" href="">
+              <img
+                class="img"
+                src="../assets/ic-course-stats.2f459a1fc4d9ff494baa.svg"
+                alt=""
+              />
+              <span>Course Statistics</span></a
+            >
+          </li>
+          <li>
+            <div class="theme-switch">
+              <input
+                type="checkbox"
+                name="theme-switch"
+                class="theme-switch__input"
+              />
+              <label for="themeSwitch" class="theme-switch__label">
+                <span></span>
+              </label>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="burger-menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
     <main>
       <article class="solution">
         <section class="step">
@@ -34,14 +102,14 @@
               exercism download --track=ruby --exercise=savings-account
             </code>
             <img
-              class="task-link__copy"
+              class="task-link__copy img"
               src="../assets/ic-copy.a14bc00a6ce65fbe85a1.svg"
               alt="copy"
             />
           </div>
           <a class="instalation-link" href="">
             Learn more about solving exercises locally
-            <img src="../assets/ic-arrow-left.6d6ad99bb104736f9061.svg" alt="" />
+            <img class="img" src="../assets/ic-arrow-left.6d6ad99bb104736f9061.svg" alt="" />
           </a>
         </section>
         <section class="step_locked">
@@ -93,13 +161,12 @@
                 <p class="code__label">For example:</p>
                 <pre class="code__wrapper">
                 <code class="code__text">
-                    module Speaker 
-                        def self.echo(something) 
-                            "#{something} ...#{something}" 
-                            end 
-                        end 
-
-                    Speaker.echo("Hello") #=> "Hello ... Hello"
+<span class="token keyword">module</span> Speaker
+  <span class="token keyword">def</span> self <span class="token function">.echo<span class="token punctuation">(</span><span>something</span><span class="token punctuation">)</span></span> 
+    <span class="token comment">"#{something} ...#{something}"</span> 
+  <span class="token keyword">end</span>
+<span class="token keyword">end</span> 
+Speaker<span class="token function">.echo</span><span class="token punctuation">(</span> <span class="token string">"Hello"</span><span class="token punctuation">)</span>  <span class="token comment">#=> "Hello ... Hello"</span>
                 </code>
               </pre>
               </div>
@@ -114,11 +181,10 @@
                 </p>
                 <pre class="code__wrapper">
                 <code class="code__text">
-                    counter = 0
-
-                    while counter < 5
-                        counter += 1
-                    end
+counter <span class="token operator">=</span> 0
+<span class="token keyword">while</span> counter <span class="token operator"><</span> 5
+  counter <span class="token operator">+=</span> 1
+<span class="token keyword">end</span>
                   </code>
                 </pre>
               </div>
@@ -128,11 +194,10 @@
                 </p>
                 <pre class="code__wrapper">
                 <code class="code__text">
-                    counter = 0
-
-                    until counter == 5
-                        counter += 1
-                    end
+counter <span class="token operator">=</span> 0
+<span class="token keyword">until</span> counter <span class="token operator">!=</span> 5
+  counter <span class="token operator">+=</span> 1
+<span class="token keyword">end</span>
                 </code>
               </pre>
               </div>
@@ -178,8 +243,8 @@
                 </p>
                 <pre class="code__wrapper">
                 <code class="code__text">
-                    SavingsAccount.interest_rate(200.75)
-                    #=> 0.5
+SavingsAccount.<span class="token function">interest_rate</span><span class="token punctuation">(</span>200.75<span class="token punctuation">)</span>
+<span class="token comment">#=> 0.5</span>
                   </code>
                 </pre>
               </div>
@@ -195,8 +260,8 @@
                 </p>
                 <pre class="code__wrapper">
                 <code class="code__text">
-                    SavingsAccount.interest_rate(200.75)
-                    #=> 0.5
+SavingsAccount.<span class="token function">annual_balance_update</span><span class="token punctuation">(</span>200.75<span class="token punctuation">)</span>
+<span class="token comment">#=> 201.75375</span>
                   </code>
                 </pre>
               </div>
@@ -211,9 +276,9 @@
                   to calculate the interest rate based on the specified balance:
                 </p>
                 <pre class="code__wrapper">
-                <code class="code__text">
-                    SavingsAccount.interest_rate(200.75)
-                    #=> 0.5
+                  <code class="code__text">
+SavingsAccount.<span class="token function">years_before_desired_balance</span><span class="token punctuation">(</span>200.75, 214.88<span class="token punctuation">)</span>
+<span class="token comment">#=> 201.75375</span>
                   </code>
                 </pre>
               </div>
@@ -235,13 +300,13 @@
           </div>
           <a class="link" href="">
             <img
-              class="link__icon"
+              class="link__icon img"
               src="../assets/ic-github-logo.5a470bdcb463ff6fb7b3.svg"
               alt=""
             />
             Edit via GitHub
             <img
-              class="link__open-icon"
+              class="link__open-icon img"
               src="../assets/ic-link.1ec396355fc69159e036.svg"
               alt="The link opens in a new window or tab"
             />
@@ -250,5 +315,5 @@
       </div>
     </main>
   </body>
-  <script src="../e2f6b6ddf5cf3b53e94b.js"></script>
+  <script src="../a79f4ed974d2aaf811c3.js"></script>
 </html>
