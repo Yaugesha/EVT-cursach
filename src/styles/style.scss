@@ -11,6 +11,7 @@ body {
   background-color: $background;
   color: $text;
 }
+
 body[theme="dark"] {
   .img,
   .logo__image,
@@ -26,5 +27,26 @@ body[theme="dark"] {
 
   .step::before {
     background-image: url("../public/svg/exercise/ic-opened-step-alt.svg") !important;
+  }
+}
+
+code {
+  .keyword {
+    color: #cc99cd;
+  }
+  .function {
+    color: #f08d49;
+  }
+  .operator {
+    color: #67cdcc;
+  }
+  .punctuation {
+    color: #cccccc;
+  }
+  .string {
+    color: #7ec699;
+  }
+  .comment {
+    color: #999999;
   }
 }

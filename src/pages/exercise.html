@@ -159,17 +159,16 @@
               </p>
               <div class="code">
                 <p class="code__label">For example:</p>
-                <!-- <pre class="code__wrapper">
+                <pre class="code__wrapper">
                 <code class="code__text">
-                    module Speaker 
-                        def self.echo(something) 
-                            "#{something} ...#{something}" 
-                            end 
-                        end 
-
-                    Speaker.echo("Hello") #=> "Hello ... Hello"
+<span class="token keyword">module</span> Speaker
+  <span class="token keyword">def</span> self <span class="token function">.echo<span class="token punctuation">(</span><span>something</span><span class="token punctuation">)</span></span> 
+    <span class="token comment">"#{something} ...#{something}"</span> 
+  <span class="token keyword">end</span>
+<span class="token keyword">end</span> 
+Speaker<span class="token function">.echo</span><span class="token punctuation">(</span> <span class="token string">"Hello"</span><span class="token punctuation">)</span>  <span class="token comment">#=> "Hello ... Hello"</span>
                 </code>
-              </pre> -->
+              </pre>
               </div>
             </div>
             <div class="theory__block">
@@ -180,29 +179,27 @@
                   to use enumeration rather than looping in general, the most
                   commonly seen loop perhaps is the <code>while</code> loop:
                 </p>
-                <!-- <pre class="code__wrapper">
+                <pre class="code__wrapper">
                 <code class="code__text">
-                    counter = 0
-
-                    while counter < 5
-                        counter += 1
-                    end
+counter <span class="token operator">=</span> 0
+<span class="token keyword">while</span> counter <span class="token operator"><</span> 5
+  counter <span class="token operator">+=</span> 1
+<span class="token keyword">end</span>
                   </code>
-                </pre> -->
+                </pre>
               </div>
               <div class="code">
                 <p class="code__label">
                   You can also use its sibling <code>until</code>
                 </p>
-                <!-- <pre class="code__wrapper">
+                <pre class="code__wrapper">
                 <code class="code__text">
-                    counter = 0
-
-                    until counter == 5
-                        counter += 1
-                    end
+counter <span class="token operator">=</span> 0
+<span class="token keyword">until</span> counter <span class="token operator">!=</span> 5
+  counter <span class="token operator">+=</span> 1
+<span class="token keyword">end</span>
                 </code>
-              </pre> -->
+              </pre>
               </div>
             </div>
           </section>
@@ -244,12 +241,12 @@
                   Implement the <code>SavingsAccount.interest_rate</code> method
                   to calculate the interest rate based on the specified balance:
                 </p>
-                <!-- <pre class="code__wrapper"> -->
-                <!-- <code class="code__text">
-                    SavingsAccount.interest_rate(200.75)
-                    #=> 0.5
+                <pre class="code__wrapper">
+                <code class="code__text">
+SavingsAccount.<span class="token function">interest_rate</span><span class="token punctuation">(</span>200.75<span class="token punctuation">)</span>
+<span class="token comment">#=> 0.5</span>
                   </code>
-                </pre> -->
+                </pre>
               </div>
               <p class="instructions__paragraph">
                 Note that the value returned is an instance of
@@ -261,12 +258,12 @@
                   Implement the <code>SavingsAccount.interest_rate</code> method
                   to calculate the interest rate based on the specified balance:
                 </p>
-                <!-- <pre class="code__wrapper">
+                <pre class="code__wrapper">
                 <code class="code__text">
-                    SavingsAccount.interest_rate(200.75)
-                    #=> 0.5
+SavingsAccount.<span class="token function">annual_balance_update</span><span class="token punctuation">(</span>200.75<span class="token punctuation">)</span>
+<span class="token comment">#=> 201.75375</span>
                   </code>
-                </pre> -->
+                </pre>
               </div>
               <p class="instructions__paragraph">
                 Note that the value returned is an instance of
@@ -278,12 +275,12 @@
                   Implement the <code>SavingsAccount.interest_rate</code> method
                   to calculate the interest rate based on the specified balance:
                 </p>
-                <!-- <pre class="code__wrapper">
-                <code class="code__text">
-                    SavingsAccount.interest_rate(200.75)
-                    #=> 0.5
+                <pre class="code__wrapper">
+                  <code class="code__text">
+SavingsAccount.<span class="token function">years_before_desired_balance</span><span class="token punctuation">(</span>200.75, 214.88<span class="token punctuation">)</span>
+<span class="token comment">#=> 201.75375</span>
                   </code>
-                </pre> -->
+                </pre>
               </div>
               <p class="instructions__paragraph">
                 Note that the value returned is an instance of
