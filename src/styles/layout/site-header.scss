@@ -1,4 +1,5 @@
 @import "../utilities/mixins.scss";
+@import "../utilities/colors.scss";
 
 .site-header {
   @include flex(center, space-between);
@@ -6,8 +7,105 @@
   margin: 0 auto;
   padding: 20px 24px;
 
-  .header-logo {
-    &__image {
+  .theme-switch {
+    height: 50px;
+    position: relative;
+    top: -58px;
+
+    .theme-switch__input,
+    .theme-switch__label {
+      position: relative;
+    }
+
+    .theme-switch__input {
+      top: 53px;
+      width: 100%;
+      height: 50px;
+      opacity: 0;
+      z-index: 2;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        + .theme-switch__label {
+          background-color: lightSlateGray;
+        }
+
+        + .theme-switch__label span::after {
+          background-color: lighten(lightBlue, 10%);
+        }
+      }
+    }
+
+    .theme-switch__label {
+      display: block;
+      padding: 10px;
+      transition: background-color 200ms ease-in-out;
+      width: 50px;
+      height: 20px;
+      border-radius: 50px;
+      text-align: center;
+      background-color: slateGray;
+      box-shadow: -4px 4px 15px inset rgba(0, 0, 0, 0.4);
+
+      &::before,
+      &::after {
+        font-size: 2rem;
+        position: absolute;
+        transform: translate3d(0, -50%, 0);
+        top: 50%;
+      }
+
+      &::before {
+        content: "\263C";
+        right: 100%;
+        margin-right: 10px;
+        color: orange;
+      }
+
+      &::after {
+        content: "\263E";
+        left: 100%;
+        margin-left: 10px;
+        color: lightSlateGray;
+      }
+
+      span {
+        position: absolute;
+        bottom: calc(100% + 10px);
+        left: 0;
+        width: 100%;
+      }
+
+      span::after {
+        position: absolute;
+        top: calc(100% + 15px);
+        left: 5px;
+        width: 30px;
+        height: 30px;
+        content: "";
+        border-radius: 50%;
+        background-color: lightBlue;
+        transition: transform 200ms, background-color 200ms;
+        box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    // Checked label styles
+    .theme-switch__input:checked ~ .theme-switch__label {
+      background-color: lightSlateGray;
+
+      &::before {
+        color: lightSlateGray;
+      }
+
+      &::after {
+        color: turquoise;
+      }
+
+      span::after {
+        transform: translate3d(30px, 0, 0);
+      }
     }
   }
 

@@ -1,0 +1,46 @@
+.instructions,
+.theory,
+.instructions {
+  margin-bottom: 32px;
+
+  &__heading {
+    @include font(24px, 600);
+    margin-bottom: 8px;
+  }
+
+  &__block {
+    margin-bottom: 32px;
+
+    &-heading {
+      @include font(20px, 600, 140%);
+      margin-bottom: 8px;
+    }
+  }
+
+  &__task {
+    @include font(20px, 600, 140%);
+    @include margin-y(32px, 8px);
+  }
+
+  &__rules {
+    margin-bottom: 24px;
+    margin-left: 14px;
+
+    li {
+      list-style-type: disc;
+    }
+  }
+
+  &__paragraph {
+    @include font(18px, 400, 160%);
+    margin-bottom: 12px;
+
+    code {
+      @include font(18px, 400, 160%);
+      background-color: #0f766e29;
+      color: $link-button;
+      border-radius: 5px;
+      padding: 0px 6px;
+    }
+  }
+}

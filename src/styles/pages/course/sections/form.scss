@@ -14,7 +14,7 @@
 .form {
   @include flex($flow: column);
   gap: 12px;
-  background-color: $white;
+  background-color: $form-color;
   max-width: 320px;
   padding: 32px 24px 24px;
   border-radius: 12px;
@@ -59,7 +59,6 @@
     .input-container {
       position: relative;
       @include flex();
-      //   @include border(1px, $black, 6px);
       width: 100%;
 
       .label-image-container {
@@ -99,11 +98,11 @@
   &__forgot-password {
     align-self: end;
     @include font(12px);
-    color: $grey-500;
+    color: $highlight-text;
     transition: all 0.4s;
 
     &:hover {
-      color: $grey-600;
+      color: $highlight-text-hover;
     }
   }
 
@@ -135,13 +134,29 @@
 
   &__text {
     @include font(16px, 500, 20px);
+
+    .oauth:hover & {
+      color: $black;
+    }
+
+    .oauth:active & {
+      color: $black;
+    }
   }
 
   &:hover {
-    background-color: $button-hover;
+    @include button-hover();
+
+    .oauth__logo {
+      filter: invert(0);
+    }
   }
 
   &:active {
-    background-color: $button-active;
+    @include button-active();
+
+    .oauth__logo {
+      filter: invert(0);
+    }
   }
 }

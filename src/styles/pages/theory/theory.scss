@@ -29,7 +29,7 @@ aside {
 
     li {
       margin: 0px;
-      border-left: 2px solid $grey-300;
+      border-left: 2px solid $border;
       padding: 8px;
       padding-left: 16px;
 
@@ -51,7 +51,7 @@ h4 {
 }
 
 .anchor-link {
-  color: #000;
+  color: $text;
 }
 
 .paragraph,
@@ -83,7 +83,7 @@ li {
 .paragraph,
 li,
 a {
-  code {
+  .code_highlited {
     @include font(16px);
     background-color: #0f766e29;
     color: $link-button;
@@ -95,9 +95,10 @@ a {
 
 a {
   &:not(.anchor-link, aside a) {
-    @include link($blue-600);
+    @include link($text-link);
 
     &:hover {
+      color: $text-link-hover;
       text-decoration: none;
     }
   }

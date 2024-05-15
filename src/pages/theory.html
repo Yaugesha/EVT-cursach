@@ -46,8 +46,8 @@
                 adopted on the frontend.
               </li>
               <li>
-                Describe what <code>npm init</code> does and what
-                <code>package.json</code> is.
+                Describe what <code class="code_highlited">npm init</code> does
+                and what <code class="code_highlited">package.json</code> is.
               </li>
               <li>Know how to install packages using npm.</li>
               <li>
@@ -158,7 +158,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  the <code>package.json</code> file</a
+                  the <code class="code_highlited">package.json</code> file</a
                 >
                 , which you can use to manage your project's dependencies.
               </li>
@@ -204,13 +204,15 @@
               >
                 Yarn
               </a>
-              - a replacement for the default <code>npm</code>. For the most
-              part, it does the same things, though it <em>does</em> have a few
-              more features. Recent versions of <code>npm</code> have
-              incorporated some of the best features of Yarn, so using it won't
-              offer you any real advantages at this point in your career. It
-              <em>is</em> a fine package manager, however, and may be worth your
-              consideration in the future.
+              - a replacement for the default
+              <code class="code_highlited">npm</code>. For the most part, it
+              does the same things, though it <em>does</em> have a few more
+              features. Recent versions of
+              <code class="code_highlited">npm</code> have incorporated some of
+              the best features of Yarn, so using it won't offer you any real
+              advantages at this point in your career. It <em>is</em> a fine
+              package manager, however, and may be worth your consideration in
+              the future.
             </p>
           </section>
           <section data-title="webpack-and-bundlers">
@@ -304,28 +306,33 @@
               >
                 Lodash
               </a>
-              ) using a <code>&lt;script&gt;</code> tag. The site lists a few
-              reasons why this is probably <em>not</em> ideal and then steps
-              through using webpack to accomplish the same thing.
+              ) using a <code class="code_highlited">&lt;script&gt;</code> tag.
+              The site lists a few reasons why this is probably
+              <em>not</em> ideal and then steps through using webpack to
+              accomplish the same thing.
             </p>
             <p class="paragraph">
               <span id="webpack-knowledge-check"
                 >Let us revisit two key words mentioned earlier -
                 <strong>entry</strong> and <strong>output</strong>. In the above
                 link's example, we rearranged the files into a
-                <code>src</code> and <code>dist</code> folder. Technically, we
+                <code class="code_highlited">src</code> and
+                <code class="code_highlited">dist</code> folder. Technically, we
                 could have called those folders anything, but those names are
-                typical. <code>src</code> is our <em>source</em> directory. In
-                other words, <code>src</code> is where we write all of the code
-                that webpack is going to bundle up for us. When webpack runs, it
-                goes through all of our files starting at any entry points we
-                give it, looks for any <code>import</code> statements and then
+                typical. <code class="code_highlited">src</code> is our
+                <em>source</em> directory. In other words,
+                <code class="code_highlited">src</code> is where we write all of
+                the code that webpack is going to bundle up for us. When webpack
+                runs, it goes through all of our files starting at any entry
+                points we give it, looks for any
+                <code class="code_highlited">import</code> statements and then
                 compiles <em>all</em> of the code we need to run our site into a
                 single file per entry point inside of the
-                <code>dist</code> folder (short for <em>distribution</em>). In
-                this example, we have a single entry point -
-                <code>/src/index.js</code>. The <strong>output</strong> file is
-                the compiled version - <code>dist/main.js</code>.</span
+                <code class="code_highlited">dist</code> folder (short for
+                <em>distribution</em>). In this example, we have a single entry
+                point - <code class="code_highlited">/src/index.js</code>. The
+                <strong>output</strong> file is the compiled version -
+                <code class="code_highlited">dist/main.js</code>.</span
               >
             </p>
             <ul>
@@ -355,11 +362,11 @@
               browser, in a runtime like Node (remember how you used Node to run
               the Jest tests for the JavaScript exercises back in the
               Foundations course?), you could use something called
-              <code>CommonJS modules</code> but that was only for Node and not
-              the browser. Fortunately, we now have ES6 modules which work in
-              both (although Node still uses CommonJS by default and you need to
-              do a tiny bit of tweaking to get it to understand ES6 module
-              syntax).
+              <code class="code_highlited">CommonJS modules</code> but that was
+              only for Node and not the browser. Fortunately, we now have ES6
+              modules which work in both (although Node still uses CommonJS by
+              default and you need to do a tiny bit of tweaking to get it to
+              understand ES6 module syntax).
             </p>
             <p class="paragraph">
               Now that we (sorta) understand what webpack is doing, it's time to
@@ -456,13 +463,15 @@
             <p class="paragraph">
               In addition, you should be able to bundle and run webpack by
               typing
-              <code>npx webpack</code> in the terminal, (or
-              <code>npm run build</code> if you're using the example project
-              created on the previous section.) .
+              <code class="code_highlited">npx webpack</code> in the terminal,
+              (or <code class="code_highlited">npm run build</code> if you're
+              using the example project created on the previous section.) .
             </p>
             <p class="paragraph">
-              Add a new file to the <code>src</code> directory called
-              <code>myName.js</code> with the following contents:
+              Add a new file to the
+              <code class="code_highlited">src</code> directory called
+              <code class="code_highlited">myName.js</code> with the following
+              contents:
             </p>
             <div class="code-toolbar" bis_skin_checked="1">
               <pre
@@ -485,8 +494,8 @@
               </div>
             </div>
             <p class="paragraph">
-              Then, in <code>src/index.js</code>, import and use your new
-              function:
+              Then, in <code class="code_highlited">src/index.js</code>, import
+              and use your new function:
             </p>
 
             <div class="code-toolbar" bis_skin_checked="1">
@@ -519,7 +528,8 @@
               </div>
             </div>
             <p class="paragraph">
-              Easy! Now, if you run <code>npx webpack</code> in your project
+              Easy! Now, if you run
+              <code class="code_highlited">npx webpack</code> in your project
               directory, your page should show our new function being used.
             </p>
             <p class="paragraph">
@@ -598,8 +608,9 @@
             <p class="paragraph">
               Using this pattern gives you the freedom to only import the
               functions you need in the various files of your program. So it's
-              perfectly fine to only import <code>functionOne</code> if that's
-              the only one you need.
+              perfectly fine to only import
+              <code class="code_highlited">functionOne</code> if that's the only
+              one you need.
             </p>
           </section>
           <section data-title="knowledge-check">
@@ -629,8 +640,9 @@
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Describe what <code>npm init</code> does and what
-                  <code>package.json</code> is.
+                  Describe what
+                  <code class="code_highlited">npm init</code> does and what
+                  <code class="code_highlited">package.json</code> is.
                 </a>
               </li>
               <li>

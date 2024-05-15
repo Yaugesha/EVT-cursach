@@ -5,11 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Code-trainer</title>
   </head>
-  <body>
+  <body theme="light">
     <header class="site-header">
       <a class="header-logo" href="">
-        <img sclass="logo__image" src="../public/logo.png" alt="logo" />
+        <img class="logo__image" src="../public/logo.png" alt="logo" />
       </a>
+      <div class="theme-switch">
+        <input
+          type="checkbox"
+          name="theme-switch"
+          class="theme-switch__input"
+        />
+        <label for="themeSwitch" class="theme-switch__label">
+          <span></span>
+        </label>
+      </div>
       <div class="burger-menu-icon">
         <span></span>
         <span></span>
@@ -40,7 +50,11 @@
             <div class="course-info">
               <span class="course-info__name">JavaScript</span>
               <div class="course-info__stats">
-                <img src="../public/svg/ic-students.svg" alt="students" />
+                <img
+                  class="img"
+                  src="../public/svg/ic-students.svg"
+                  alt="students"
+                />
                 <span class="course-info__students">51,407 students</span>
               </div>
             </div>
@@ -471,7 +485,11 @@
             <img src="../public/svg/ic-js-logo-blur.svg" alt="JS" />
           </div>
           <div class="feature" id="feature-1">
-            <img src="../public/svg/features/ic-cross-platform.svg" alt="" />
+            <img
+              class="img"
+              src="../public/svg/features/ic-cross-platform.svg"
+              alt=""
+            />
             <h3>Runs almost everywhere</h3>
             <p>
               Build web-pages, write backend, create database scripts, make
@@ -479,7 +497,11 @@
             </p>
           </div>
           <div class="feature" id="feature-2">
-            <img src="../public/svg/features/ic-multi-paradigm.svg" alt="" />
+            <img
+              class="img"
+              src="../public/svg/features/ic-multi-paradigm.svg"
+              alt=""
+            />
             <h3>Use any programming style</h3>
             <p>
               Use prototype-based, object-oriented, functional, or declarative
@@ -487,7 +509,11 @@
             </p>
           </div>
           <div class="feature" id="feature-3">
-            <img src="../public/svg/features/ic-dynamically-typed.svg" alt="" />
+            <img
+              class="img"
+              src="../public/svg/features/ic-dynamically-typed.svg"
+              alt=""
+            />
             <h3>No types required</h3>
             <p>
               Dynamically and weakly typed by default, gain typed confidence
@@ -495,7 +521,11 @@
             </p>
           </div>
           <div class="feature" id="feature-4">
-            <img src="../public/svg/features/ic-tooling.svg" alt="" />
+            <img
+              class="img"
+              src="../public/svg/features/ic-tooling.svg"
+              alt=""
+            />
             <h3>Largest package registry</h3>
             <p>
               No need to reinvent the wheel. Build on ProgForce of > 1.3 million
@@ -503,7 +533,11 @@
             </p>
           </div>
           <div class="feature" id="feature-5">
-            <img src="../public/svg/features/ic-community.svg" alt="" />
+            <img
+              class="img"
+              src="../public/svg/features/ic-community.svg"
+              alt=""
+            />
             <h3>Designed by a committee</h3>
             <p>
               Frequent updates, following ECMAScript, a general purpose, cross
@@ -511,7 +545,11 @@
             </p>
           </div>
           <div class="feature" id="feature-6">
-            <img src="../public/svg/features/ic-concurrency.svg" alt="" />
+            <img
+              class="img"
+              src="../public/svg/features/ic-concurrency.svg"
+              alt=""
+            />
             <h3>Concurrency is safe</h3>
             <p>
               Async/await, dedicated workers, or state sync in shared workers.
@@ -736,7 +774,7 @@
       <section id="form" class="popup">
         <form class="form" action="../pages/dashboard.html">
           <a class="form__header" href="../pages/main.html">
-            <img src="../public/logo.png" alt="logo" />
+            <img class="img" src="../public/logo.png" alt="logo" />
           </a>
           <button class="form__oauth oauth popup-close-button">
             <span class="oauth__text">Sign in with github</span>
@@ -773,18 +811,24 @@
     <footer>
       <div class="footer">
         <div class="footer__about">
-          <img src="../public/logo.png" alt="logo" />
+          <img class="img" src="../public/logo.png" alt="logo" />
           <span class="footer__slogan">
             High quality coding education maintained by an open source
             community.
           </span>
           <div class="footer__socials">
             <img
+              class="img"
               src="../public/svg/socials/ic-telega-logo.svg"
               alt="telegram"
             />
-            <img src="../public/svg/socials/ic-github-logo.svg" alt="github" />
             <img
+              class="img"
+              src="../public/svg/socials/ic-github-logo.svg"
+              alt="github"
+            />
+            <img
+              class="img"
               src="../public/svg/socials/ic-discord-logo.svg"
               alt="discord"
             />

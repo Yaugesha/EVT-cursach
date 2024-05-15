@@ -1,30 +1,141 @@
+:root {
+  --background: #f8f7ff;
+  --background-hover: #f5f5f6;
+
+  --text: #232134;
+
+  --border: #d5d6dc;
+
+  --shadow: #fbfcfe;
+  --box-shadow: rgba(0, 0, 0, 0.35);
+
+  --button: #eeeeee;
+  --button-hover: #d5d5d5;
+  --button-active: #bfbfbf;
+
+  --link: #545454;
+  --text-link: #5e96fc;
+  --text-link-hover: #3b7cd3;
+
+  --form-color: $white;
+}
+
+.theme-switch__input:checked ~ :root {
+  --background: #111827;
+  --text: #d1d5d8;
+  --background-hover: #1e293bb3;
+
+  --shadow: #111827;
+  --box-shadow: rgba(67, 67, 67, 0.35);
+
+  --border: #d5d6dc;
+
+  --button: #535353;
+
+  --link: #9ca3af;
+  --text-link: #3b7cd3;
+  --text-link-hover: #5e96fc;
+
+  --form-color: #181821;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #f8f7ff;
+    --background-hover: #f5f5f6;
+
+    --text: #232134;
+
+    --border: #d5d6dc;
+
+    --shadow: #fbfcfe;
+    --box-shadow: rgba(0, 0, 0, 0.35);
+
+    --highlight-text: #7b7c88;
+    --highlight-text-hover: #acadb9;
+
+    --button: #eeeeee;
+    --button-hover: #d5d5d5;
+    --button-active: #bfbfbf;
+
+    --link-button: #0f766e;
+    --link-button-hover: #115e59;
+    --link-button-active: #12625c;
+
+    --link: #545454;
+    --text-link: #5e96fc;
+    --text-link-hover: #3b7cd3;
+
+    --form-color: $white;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #111827;
+    --text: #d1d5d8;
+    --background-hover: #1e293bb3;
+
+    --shadow: #111827;
+    --box-shadow: rgba(67, 67, 67, 0.35);
+
+    --border: #d5d6dc;
+
+    --highlight-text: #7b7c88;
+    --highlight-text-hover: #acadb9;
+
+    --button: #535353;
+    --button-hover: #d5d5d5;
+    --button-active: #bfbfbf;
+
+    --link-button: #0f766e;
+    --link-button-hover: #115e59;
+    --link-button-active: #12625c;
+
+    --link: #9ca3af;
+    --text-link: #3b7cd3;
+    --text-link-hover: #5e96fc;
+
+    --form-color: #181821;
+  }
+}
+
+$background: var(--background);
+$background-hover: var(--background-hover);
+
+$text: var(--text);
+
+$border: var(--border);
+
+$shadow: var(--shadow);
+$box-shadow: var(--box-shadow);
+
+$button: var(--button);
+$button-hover: var(--button-hover);
+$button-active: var(--button-active);
+
+$link-button: var(--link-button);
+$link-button-hover: var(--link-button-hover);
+$link-button-active: var(--link-button-active);
+
+$link: var(--link);
+$text-link: var(--text-link);
+$text-link-hover: var(--text-link-hover);
+
+$form-color: var(--form-color);
+
 $white: #ffffff;
-$grey-100: #f5f5f6;
-$grey-200: #eaebed;
-$grey-300: #d5d6dc;
-$grey-500: #acadb9;
-$grey-600: #7b7c88;
 $black: #232134;
 
-$blue-600: #3b7cd3;
-$blue-500: #5e96fc;
-$blue-400: #92c1ff;
-$blue-300: #b7d6ff;
-$blue-200: #c9e0ff;
-$blue-100: #deecff;
+$highlight-text: #7b7c88;
+$highlight-text-hover: #acadb9;
 
-$background: #f8f7ff;
-
-$button: #eeeeee;
-$button-hover: #afafaf;
-$button-active: #afafaf;
+$button-hover: #d5d5d5;
+$button-active: #bfbfbf;
 
 $link-button: #0f766e;
 $link-button-hover: #115e59;
 $link-button-active: #12625c;
-
-$link: #545454;
-$text-link: #177e89;
 
 $gold: #f4d06f;
 

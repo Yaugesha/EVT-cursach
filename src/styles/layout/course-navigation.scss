@@ -16,7 +16,7 @@ header {
     @include flex();
     gap: 10px;
     @include font(14px, 400, 46px);
-    color: #000;
+    color: $text;
 
     cursor: pointer;
   }

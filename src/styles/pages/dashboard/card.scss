@@ -1,14 +1,14 @@
 @import "../../utilities/mixins.scss";
 
 .dashboard-card {
-  @include border(1px, $grey-300, 8px);
+  @include border(1px, $radius: 8px);
   @include shadow();
 
   &__head {
     @include flex($content: space-between);
     @include font($weight: 600, $line-h: 56px);
     padding: 0px 24px;
-    border-bottom: 1px solid $grey-200;
+    border-bottom: 1px solid $border;
   }
 
   &__body {
@@ -18,7 +18,7 @@
 
   &__footer {
     @include flex();
-    border-top: 1px solid $grey-200;
+    border-top: 1px solid $border;
     padding: 16px;
   }
 }
@@ -65,11 +65,11 @@
   padding: 12px 8px;
 
   &:hover {
-    background-color: $grey-100;
+    background-color: $background-hover;
   }
 
   &:not(&:last-of-type) {
-    border-bottom: 1px solid $grey-200;
+    border-bottom: 1px solid $border;
   }
 
   &__name {
@@ -78,12 +78,12 @@
 
     a {
       display: block;
-      color: $blue-500;
+      color: $text-link;
       width: 90px;
       transition: all 0.4s;
 
       &:hover {
-        color: $blue-600;
+        color: $text-link-hover;
       }
     }
   }
@@ -143,7 +143,7 @@
   padding: 8px 4px;
 
   &__annotation {
-    color: $grey-600;
+    color: $highlight-text;
   }
 }
 
@@ -153,11 +153,11 @@
 
   &__link {
     @include flex();
-    color: $blue-500;
+    color: $text-link;
     gap: 4px;
 
     &:hover {
-      color: $blue-600;
+      color: $text-link-hover;
     }
   }
 }
@@ -169,7 +169,7 @@
 
   &-link {
     @include font(14px, 400);
-    @include link($blue-500);
+    @include link($text-link);
     text-decoration: none;
     transition: all 0.4s;
   }
@@ -181,15 +181,15 @@
   background-color: $button;
   @include font(14px, 400, 120%);
   padding: 4px 16px;
-  @include border(1px, $grey-500, 6px);
+  @include border(1px, $border, 6px);
   transition: all 0.4s;
   cursor: pointer;
 
   &:hover {
-    background-color: $button-hover;
+    @include button-hover();
   }
 
   &:active {
-    background-color: $button-active;
+    @include button-active();
   }
 }

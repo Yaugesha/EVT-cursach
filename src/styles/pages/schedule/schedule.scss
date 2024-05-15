@@ -17,7 +17,7 @@ main {
 
 .table-head {
   &__cell {
-    border-bottom: 1px solid $grey-300;
+    border-bottom: 1px solid $border;
     text-align: end;
     padding: 12px 8px;
   }
@@ -52,7 +52,7 @@ main {
 
 .table-body {
   &__cell {
-    border-bottom: 1px solid $grey-300;
+    border-bottom: 1px solid $border;
     padding: 12px 8px;
 
     &:nth-last-of-type(2),

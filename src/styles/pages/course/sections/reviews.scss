@@ -38,8 +38,8 @@
 }
 
 .stat__scale {
-  @include border(0.0625rem, #000, 5rem);
-  background-color: #fff;
+  @include border(0.0625rem, $black, 5rem);
+  background-color: $white;
   @include size(216px, 0.5rem);
 }
 
@@ -103,7 +103,7 @@
 }
 
 .review {
-  @include border(1px, $grey-300, 16px);
+  @include border(1px, $radius: 16px);
   @include flex(start, space-between, column);
   gap: 16px;
   line-height: 1.5;

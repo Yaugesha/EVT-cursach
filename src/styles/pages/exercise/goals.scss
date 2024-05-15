@@ -1,0 +1,44 @@
+.goals {
+  margin-bottom: 32px;
+
+  &__heading {
+    @include font(24px, 600);
+    margin-bottom: 8px;
+  }
+
+  &__description {
+    @include font(18px, 400, 160%);
+    margin-bottom: 12px;
+  }
+
+  &__block {
+    margin-bottom: 32px;
+
+    &-heading {
+      @include font(20px, 600, 140%);
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.concepts {
+  @include flex();
+  gap: 8px;
+}
+
+.concept {
+  @include flex();
+  gap: 8px;
+  @include font(14px, 600, 0.9);
+  color: $text;
+  padding: 8px 16px;
+  @include border(1px, $border, 8px);
+
+  &__logo {
+    @include flex(end);
+    @include font(11px, 600);
+    @include border(1px, $border, 0px);
+    padding: 3px;
+    @include size(16px);
+  }
+}

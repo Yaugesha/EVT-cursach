@@ -1,6 +1,31 @@
 @import "./base/fonts.css";
 @import "./base/reset.css";
 
+@import "./utilities/mixins.scss";
+
 @import "./layout/site-header.scss";
 @import "./layout/page-header.scss";
 @import "./layout/footer.scss";
+
+body {
+  background-color: $background;
+  color: $text;
+}
+
+@media (prefers-color-scheme: dark) {
+  .img,
+  .logo__image,
+  .oauth__logo,
+  .tab__label::after,
+  .drop-down-button:after {
+    filter: invert(1);
+  }
+
+  .step_locked::before {
+    background-image: url("../public/svg/exercise/ic-locked-step-alt.svg") !important;
+  }
+
+  .step::before {
+    background-image: url("../public/svg/exercise/ic-opened-step-alt.svg") !important;
+  }
+}
