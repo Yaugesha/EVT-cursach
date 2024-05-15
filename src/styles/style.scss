@@ -11,8 +11,7 @@ body {
   background-color: $background;
   color: $text;
 }
-
-@media (prefers-color-scheme: dark) {
+body[theme="dark"] {
   .img,
   .logo__image,
   .oauth__logo,

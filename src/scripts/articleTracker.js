@@ -23,7 +23,10 @@ export function trackArticle() {
     const currentArticleCordinates = currentArticle.getBoundingClientRect();
 
     // when scroll to prev article
-    if (currentArticleCordinates.top > 20) {
+    if (
+      currentArticleCordinates.top > 20 &&
+      current.getAttribute("type") != "introduction"
+    ) {
       current.classList.remove("current");
       current = current.previousElementSibling;
       currentArticle = currentArticle.previousElementSibling;
@@ -31,7 +34,7 @@ export function trackArticle() {
     }
 
     // when scroll to next article
-    if (currentArticleCordinates.top + currentArticleCordinates.height <= -20) {
+    if (currentArticleCordinates.top + currentArticleCordinates.height <= 0) {
       current.classList.remove("current");
       current = current.nextElementSibling;
       currentArticle = currentArticle.nextElementSibling;

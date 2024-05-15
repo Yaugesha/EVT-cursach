@@ -55,6 +55,16 @@ footer {
     font-size: 12px;
     line-height: 1.25rem;
   }
+
+  &__contacts {
+    @include flex();
+    gap: 32px;
+
+    a {
+      @include font();
+      color: $link;
+    }
+  }
 }
 
 @import "../responisive/footer.scss";

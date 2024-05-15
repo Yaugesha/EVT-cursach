@@ -15,6 +15,7 @@ export function toggleTheme() {
     root.style.setProperty("--text-link", "#3b7cd3");
     root.style.setProperty("--text-link-hover", "#5e96fc");
     root.style.setProperty("--form-color", "#181821");
+    root.style.setProperty("--code-block-color", "#1e293b");
   };
 
   const setLightTheme = () => {
@@ -28,16 +29,29 @@ export function toggleTheme() {
     root.style.setProperty("--link", "#545454");
     root.style.setProperty("--text-link", "#5e96fc");
     root.style.setProperty("--text-link-hover", "#3b7cd3");
-    root.style.setProperty("--form-color", "#181821");
+    root.style.setProperty("--form-color", "#fff");
+    root.style.setProperty("--code-block-color", "#f8f7ff");
   };
 
   function themePref() {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       switcher.checked = true;
-      root.style.setProperty("--theme", "dark");
+      document.body.setAttribute("theme", "dark");
     } else if (window.matchMedia("(prefers-color-scheme: light)").matches) {
       switcher.checked = false;
-      root.style.setProperty("--theme", "light");
+      document.body.setAttribute("theme", "light");
+    }
+  }
+
+  function getTheme() {
+    if (sessionStorage.getItem("theme") === "dark") {
+      switcher.checked = true;
+      setDarkTheme();
+      document.body.setAttribute("theme", "dark");
+    } else if (sessionStorage.getItem("theme") === "light") {
+      switcher.checked = false;
+      setLightTheme();
+      document.body.setAttribute("theme", "light");
     }
   }
 
@@ -45,12 +59,15 @@ export function toggleTheme() {
     console.log(getComputedStyle(root).getPropertyValue("--theme"));
     if (switcher.checked == true) {
       setDarkTheme();
-      root.style.setProperty("--theme", "dark");
+      sessionStorage.setItem("theme", "dark");
+      document.body.setAttribute("theme", "dark");
     } else {
       setLightTheme();
-      root.style.setProperty("--theme", "light");
+      sessionStorage.setItem("theme", "light");
+      document.body.setAttribute("theme", "light");
     }
   });
 
   themePref();
+  getTheme();
 }

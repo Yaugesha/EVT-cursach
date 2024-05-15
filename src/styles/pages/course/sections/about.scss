@@ -75,10 +75,11 @@ h2 {
 }
 
 .js-code-example {
-  max-width: 450px;
+  max-width: 100%;
   margin-left: 72px;
-  @include size(50%, 128px);
+  @include size(450px, 128px);
 
+  background-color: $code-block-color;
   border-radius: 8px;
   @include shadow();
   padding: 24px 0px;

@@ -71,10 +71,10 @@
   .editor-link {
     @include flex($content: center);
     @include font(16px, 600, 138%);
-    color: $text;
+    color: $white;
     background-color: $link-button;
     padding: 0px 20px;
-    @include border(1px, #000, 5px);
+    @include border(1px, $black, 5px);
     height: 48px;
     margin-bottom: 16px;
   }

@@ -2,7 +2,9 @@
   main {
     flex-flow: column;
 
-    .solution, .goals, .exercise {
+    .solution,
+    .goals,
+    .exercise {
       width: calc(100vw - 57px);
       max-width: 100%;
     }

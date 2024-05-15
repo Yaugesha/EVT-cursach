@@ -6,7 +6,9 @@ header {
 }
 
 .course-navigation {
-  padding: 0px 24px;
+  .theme-switch {
+    top: -42px;
+  }
 
   &__list {
     @include flex();
