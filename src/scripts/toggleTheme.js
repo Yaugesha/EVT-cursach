@@ -19,7 +19,7 @@ export function toggleTheme() {
   };
 
   const setLightTheme = () => {
-    root.style.setProperty("--background", "#f8f7ff");
+    root.style.setProperty("--background", "#ffffff");
     root.style.setProperty("--text", "#232134");
     root.style.setProperty("--background-hover", "#f5f5f6");
     root.style.setProperty("--shadow", "#fbfcfe");
